@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafaf8;
+  --foreground: #3a3f47;
+
+  /* Soft Gold — refined brand gold, pastel-warm */
+  --gold: #c9a96e;
+  --gold-light: #e8d5a8;
+  --gold-dark: #b0924f;
+  --gold-muted: #d4c49a;
+
+  /* Sage — refreshing pastel green (tea garden) */
+  --teal: #7fad96;
+  --teal-dark: #5a8a72;
+  --teal-light: #a8ccb8;
+
+  /* Deep Sage — elegant dark for hero/CTA sections */
+  --black-rich: #2d4a3e;
+  --black-soft: #3a3f47;
+  --charcoal: #3d5a4e;
+
+  /* Warm Accent — soft coral */
+  --red: #e8a87c;
+  --red-dark: #d4916a;
+
+  /* Neutrals — light, airy, clean */
+  --cream: #f4f9f6;
+  --cream-dark: #e2ede7;
+  --gray: #6b7a74;
+  --gray-light: #9baba3;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-muted: var(--gold-muted);
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+  --color-teal-light: var(--teal-light);
+  --color-black-rich: var(--black-rich);
+  --color-black-soft: var(--black-soft);
+  --color-charcoal: var(--charcoal);
+  --color-red: var(--red);
+  --color-red-dark: var(--red-dark);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-gray: var(--gray);
+  --color-gray-light: var(--gray-light);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }

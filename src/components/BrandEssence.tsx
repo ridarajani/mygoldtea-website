@@ -10,22 +10,22 @@ export default function BrandEssence() {
             <span className="text-sm font-semibold uppercase tracking-widest text-gold-dark">
               Our Story
             </span>
-            <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-black-soft leading-tight">
+            <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-brown-dark leading-tight">
               An Indigenous Product
               <br />
-              <span className="text-gold">of Malawi</span>
+              <span className="text-gold-dark italic">of Malawi</span>
             </h2>
-            <p className="mt-6 text-lg text-gray leading-relaxed">
+            <p className="mt-6 text-lg text-brown leading-relaxed">
               MyGold Tea is Malawi&apos;s most loved tea brand that prides
               itself on superior quality tea from the finest tea gardens in
               Africa. The tea leaves used in the blending of MyGold Tea are
               carefully collected from the finest tea gardens of Malawi.
             </p>
-            <p className="mt-4 text-lg text-gray leading-relaxed">
+            <p className="mt-4 text-lg text-brown leading-relaxed">
               MyGold Tea is the supreme blend of tea of which the smell and taste
               give a feeling of refreshingness to anyone who drinks it.
             </p>
-            <p className="mt-4 text-gray-light">
+            <p className="mt-4 text-brown-light">
               It is the endeavor of our highly qualified staff who work very hard
               for making this unique export quality blend for Malawian people and
               other tea lovers around the world.
@@ -35,7 +35,7 @@ export default function BrandEssence() {
           {/* Right — Image Collage */}
           <div className="relative">
             {/* Main image */}
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
+            <div className="rounded-3xl overflow-hidden shadow-xl shadow-brown/10">
               <Image
                 src="/images/pure-african-gold.png"
                 alt="MyGold Pure African Gold 500g"
@@ -46,7 +46,7 @@ export default function BrandEssence() {
             </div>
 
             {/* Floating card - bottom left */}
-            <div className="absolute -bottom-8 -left-4 sm:-left-8 rounded-2xl overflow-hidden shadow-2xl border-4 border-cream w-44 sm:w-52 h-36 sm:h-40">
+            <div className="absolute -bottom-8 -left-4 sm:-left-8 rounded-2xl overflow-hidden shadow-xl shadow-brown/10 border-4 border-cream w-44 sm:w-52 h-36 sm:h-40">
               <Image
                 src="/images/tea-jar.png"
                 alt="MyGold Tea Jar"
@@ -56,7 +56,7 @@ export default function BrandEssence() {
             </div>
 
             {/* Info card - top right */}
-            <div className="absolute -top-4 -right-4 sm:-right-6 rounded-2xl bg-black-rich p-5 shadow-2xl border border-white/10">
+            <div className="absolute -top-4 -right-4 sm:-right-6 rounded-2xl bg-white p-5 shadow-xl shadow-brown/10 border border-cream-dark">
               <div className="space-y-4">
                 {[
                   { title: "Finest Tea Gardens", icon: "🌿" },
@@ -65,7 +65,7 @@ export default function BrandEssence() {
                 ].map((item) => (
                   <div key={item.title} className="flex items-center gap-3">
                     <span className="text-lg">{item.icon}</span>
-                    <span className="text-sm font-medium text-gold-light">
+                    <span className="text-sm font-medium text-brown-dark">
                       {item.title}
                     </span>
                   </div>

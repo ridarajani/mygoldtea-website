@@ -1,109 +1,133 @@
+import Image from "next/image";
+
 const facts = [
   {
     emoji: "🌍",
     fact: "Tea is the second most consumed beverage in the world, after water.",
     highlight: true,
+    image: "/images/products-overview.png",
   },
   {
     emoji: "🌱",
     fact: "All types of tea come from the same plant — Camellia sinensis.",
     highlight: false,
+    image: "/images/hero.jpg",
   },
   {
     emoji: "🏛️",
     fact: "Tea was discovered in China over 5,000 years ago.",
     highlight: false,
+    image: "/images/lifestyle.jpg",
   },
   {
     emoji: "💰",
     fact: "The world's most expensive tea, Da Hong Pao, sells for up to $1.2M per kg.",
     highlight: true,
+    image: "/images/pure-african-gold.png",
   },
   {
     emoji: "❤️",
     fact: "Tea can help reduce the risk of heart disease, stroke, and certain cancers.",
     highlight: false,
+    image: "/images/tea-jar.png",
   },
   {
     emoji: "🇹🇷",
     fact: "The world's largest tea-drinking nation is Turkey, not England!",
     highlight: false,
+    image: "/images/export-quality-range.png",
   },
 ];
 
 export default function FunFacts() {
   return (
-    <section id="funfacts" className="bg-white py-24 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="funfacts" className="relative bg-green-dark py-24 overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-green-dark via-green-dark to-green/80" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gold/10 blur-[200px]" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-green-light/10 blur-[150px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-gold-light/5 blur-[120px]" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-sm font-semibold uppercase tracking-widest text-teal">
+          <span className="text-sm font-semibold uppercase tracking-widest text-gold-light">
             Did You Know?
           </span>
-          <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-black-soft">
-            Fun Tea <span className="text-gold">Facts</span>
+          <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-white">
+            Fun Tea <span className="text-gold-light italic">Facts</span>
           </h2>
-          <p className="mt-4 text-lg text-gray">
+          <p className="mt-4 text-lg text-white/60">
             Tea has been shown to have various health benefits. Here are some
             fascinating facts about the world&apos;s favorite hot drink.
           </p>
         </div>
 
-        {/* Facts Grid */}
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {facts.map((item, index) => (
+        {/* Featured fact — large card */}
+        <div className="mt-14 rounded-3xl overflow-hidden border border-white/10 group">
+          <div className="grid lg:grid-cols-2">
+            <div className="relative h-64 lg:h-auto overflow-hidden">
+              <Image
+                src={facts[0].image}
+                alt={facts[0].fact}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-green-dark/50 lg:bg-gradient-to-l lg:from-green-dark/30 lg:to-transparent" />
+            </div>
+            <div className="bg-white/[0.07] backdrop-blur-sm p-8 sm:p-10 flex flex-col justify-center">
+              <span className="text-5xl mb-5">{facts[0].emoji}</span>
+              <p className="text-xl sm:text-2xl font-semibold text-white leading-relaxed">
+                {facts[0].fact}
+              </p>
+              <div className="mt-6 w-16 h-0.5 bg-gradient-to-r from-gold to-gold-light rounded-full" />
+            </div>
+          </div>
+        </div>
+
+        {/* Remaining facts grid */}
+        <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {facts.slice(1).map((item, index) => (
             <div
               key={item.fact}
-              className={`group relative rounded-3xl p-7 transition-all duration-500 overflow-hidden ${
-                item.highlight
-                  ? "bg-black-rich text-white hover:shadow-2xl hover:shadow-gold/10"
-                  : "bg-cream border border-cream-dark hover:border-teal/30 hover:shadow-xl"
-              }`}
+              className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-gold-light/30 transition-all duration-500"
             >
-              {/* Subtle gradient accent for highlighted cards */}
-              {item.highlight && (
-                <>
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-full blur-3xl" />
-                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-teal/10 rounded-full blur-2xl" />
-                </>
-              )}
+              {/* Image background */}
+              <div className="relative h-44 overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.fact}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-dark via-green-dark/70 to-green-dark/30" />
 
-              <div className="relative z-10">
-                {/* Number + Emoji row */}
-                <div className="flex items-center justify-between mb-5">
-                  <span
-                    className={`text-4xl ${
-                      item.highlight
-                        ? "grayscale-0"
-                        : "grayscale-0"
-                    }`}
-                  >
-                    {item.emoji}
-                  </span>
-                  <span
-                    className={`text-sm font-bold ${
-                      item.highlight ? "text-gold/30" : "text-cream-dark"
-                    }`}
-                  >
-                    {String(index + 1).padStart(2, "0")}
+                {/* Number */}
+                <div className="absolute top-3 right-3">
+                  <span className="text-xs font-bold text-white/30 font-serif">
+                    {String(index + 2).padStart(2, "0")}
                   </span>
                 </div>
 
-                <p
-                  className={`leading-relaxed text-[15px] ${
-                    item.highlight ? "text-white/80" : "text-gray"
-                  }`}
-                >
+                {/* Emoji */}
+                <div className="absolute top-3 left-3">
+                  <span className="text-2xl">{item.emoji}</span>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="bg-white/[0.07] backdrop-blur-sm px-4 py-4">
+                <p className="text-[13px] leading-relaxed text-white/75">
                   {item.fact}
                 </p>
               </div>
 
-              {/* Bottom accent line */}
+              {/* Bottom accent */}
               <div
                 className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left ${
                   item.highlight
                     ? "from-gold via-gold-light to-gold-dark"
-                    : "from-teal via-teal-light to-teal-dark"
+                    : "from-gold-light/60 via-green-light to-green"
                 }`}
               />
             </div>
@@ -112,13 +136,13 @@ export default function FunFacts() {
 
         {/* Link to full page */}
         <div className="mt-14 text-center">
-          <p className="text-gray-light mb-5">
+          <p className="text-white/40 mb-5">
             There are over 1,500 types of tea in the world — and so much more to
             discover.
           </p>
           <a
             href="/fun-facts"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal to-teal-dark px-8 py-3.5 text-white font-semibold shadow-lg shadow-teal/20 hover:shadow-xl hover:shadow-teal/25 transition-all"
+            className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-white font-semibold shadow-lg shadow-gold/20 hover:bg-gold-dark hover:shadow-xl transition-all"
           >
             Explore All 16 Tea Facts
             <svg

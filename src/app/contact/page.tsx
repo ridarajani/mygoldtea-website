@@ -29,13 +29,14 @@ export default function ContactPage() {
     <>
       <Navbar />
 
-      {/* Hero Banner */}
-      <section className="relative bg-gradient-to-br from-black-rich via-black-rich to-charcoal pt-32 pb-20">
-        <div className="absolute top-20 left-20 w-72 h-72 rounded-full bg-gold/10 blur-3xl" />
+      {/* Hero Banner — matches Products page style */}
+      <section className="relative bg-gradient-to-br from-green-dark to-green pt-32 pb-20 overflow-hidden">
+        <div className="absolute top-20 left-20 w-72 h-72 rounded-full bg-gold-light/10 blur-3xl" />
+        <div className="absolute bottom-0 right-10 w-64 h-64 rounded-full bg-green-light/10 blur-3xl" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm text-gold-light hover:text-gold transition-colors mb-6"
+            className="inline-flex items-center gap-2 text-sm text-gold-light hover:text-white transition-colors mb-6"
           >
             <svg
               className="w-4 h-4"
@@ -53,7 +54,7 @@ export default function ContactPage() {
             Back to Home
           </Link>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
-            Contact <span className="text-gold">Us</span>
+            Contact <span className="text-gold-light italic">Us</span>
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-white/70">
             Have a question, want to place an order, or just want to say hello?
@@ -69,10 +70,10 @@ export default function ContactPage() {
             {/* Contact Info — 2 cols */}
             <div className="lg:col-span-2 space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-black-soft">
+                <h2 className="text-2xl font-bold text-brown-dark">
                   Get in Touch
                 </h2>
-                <p className="mt-2 text-gray">
+                <p className="mt-2 text-brown">
                   Reach out to us through any of the channels below, or fill out
                   the form and we&apos;ll get back to you shortly.
                 </p>
@@ -104,8 +105,8 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-black-soft">Address</h3>
-                    <p className="mt-1 text-sm text-gray">
+                    <h3 className="font-semibold text-brown-dark">Address</h3>
+                    <p className="mt-1 text-sm text-brown">
                       Pvt Bag B-321, Lilongwe, Malawi
                     </p>
                   </div>
@@ -129,10 +130,10 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-black-soft">Phone</h3>
+                    <h3 className="font-semibold text-brown-dark">Phone</h3>
                     <a
                       href="tel:+265990288889"
-                      className="mt-1 text-sm text-gray hover:text-gold transition-colors"
+                      className="mt-1 text-sm text-brown hover:text-gold transition-colors"
                     >
                       +265 990 28 88 89
                     </a>
@@ -157,10 +158,10 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-black-soft">Email</h3>
+                    <h3 className="font-semibold text-brown-dark">Email</h3>
                     <a
                       href="mailto:contact@mygoldtea.com"
-                      className="mt-1 text-sm text-gray hover:text-gold transition-colors"
+                      className="mt-1 text-sm text-brown hover:text-gold transition-colors"
                     >
                       contact@mygoldtea.com
                     </a>
@@ -170,7 +171,7 @@ export default function ContactPage() {
 
               {/* Social */}
               <div>
-                <h3 className="font-semibold text-black-soft mb-3">
+                <h3 className="font-semibold text-brown-dark mb-3">
                   Follow Us
                 </h3>
                 <div className="flex gap-3">
@@ -179,7 +180,7 @@ export default function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
-                    className="w-11 h-11 rounded-full bg-black-rich flex items-center justify-center text-white hover:bg-gold transition-colors"
+                    className="w-11 h-11 rounded-full bg-green-dark flex items-center justify-center text-white hover:bg-gold transition-colors"
                   >
                     <svg
                       className="w-5 h-5"
@@ -194,7 +195,7 @@ export default function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
-                    className="w-11 h-11 rounded-full bg-black-rich flex items-center justify-center text-white hover:bg-gold transition-colors"
+                    className="w-11 h-11 rounded-full bg-green-dark flex items-center justify-center text-white hover:bg-gold transition-colors"
                   >
                     <svg
                       className="w-5 h-5"
@@ -209,7 +210,7 @@ export default function ContactPage() {
 
               {/* Map placeholder */}
               <div className="rounded-xl overflow-hidden border border-cream-dark">
-                <div className="h-48 bg-gradient-to-br from-teal/10 to-gold/10 flex items-center justify-center">
+                <div className="h-48 bg-gradient-to-br from-green/10 to-gold/10 flex items-center justify-center">
                   <div className="text-center">
                     <svg
                       className="w-10 h-10 text-gold/40 mx-auto"
@@ -230,7 +231,7 @@ export default function ContactPage() {
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                     </svg>
-                    <p className="mt-2 text-sm text-gray-light">
+                    <p className="mt-2 text-sm text-brown-light">
                       Lilongwe, Malawi
                     </p>
                   </div>
@@ -241,19 +242,19 @@ export default function ContactPage() {
             {/* Contact Form — 3 cols */}
             <div className="lg:col-span-3">
               <div className="rounded-2xl bg-white border border-cream-dark p-8 sm:p-10">
-                <h2 className="text-2xl font-bold text-black-soft">
+                <h2 className="text-2xl font-bold text-brown-dark">
                   Leave Us a Message
                 </h2>
-                <p className="mt-2 text-gray">
+                <p className="mt-2 text-brown">
                   Fill out the form below and we&apos;ll respond as soon as
                   possible.
                 </p>
 
                 {submitted ? (
-                  <div className="mt-10 rounded-xl bg-teal/5 border border-teal/20 p-8 text-center">
-                    <div className="mx-auto w-16 h-16 rounded-full bg-teal/10 flex items-center justify-center mb-4">
+                  <div className="mt-10 rounded-xl bg-green/5 border border-green/20 p-8 text-center">
+                    <div className="mx-auto w-16 h-16 rounded-full bg-green/10 flex items-center justify-center mb-4">
                       <svg
-                        className="w-8 h-8 text-teal"
+                        className="w-8 h-8 text-green"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -266,10 +267,10 @@ export default function ContactPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-semibold text-teal">
+                    <h3 className="text-xl font-semibold text-green">
                       Message Sent!
                     </h3>
-                    <p className="mt-2 text-gray">
+                    <p className="mt-2 text-brown">
                       Thank you for reaching out. We&apos;ll get back to you
                       shortly.
                     </p>
@@ -294,7 +295,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="name"
-                        className="block text-sm font-medium text-black-soft mb-2"
+                        className="block text-sm font-medium text-brown-dark mb-2"
                       >
                         Full Name <span className="text-gold">*</span>
                       </label>
@@ -306,7 +307,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Your full name"
-                        className="w-full rounded-xl border border-cream-dark bg-cream/30 px-4 py-3 text-black-soft placeholder:text-gray-light outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all"
+                        className="w-full rounded-xl border border-cream-dark bg-cream/30 px-4 py-3 text-brown-dark placeholder:text-brown-light outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all"
                       />
                     </div>
 
@@ -315,7 +316,7 @@ export default function ContactPage() {
                       <div>
                         <label
                           htmlFor="email"
-                          className="block text-sm font-medium text-black-soft mb-2"
+                          className="block text-sm font-medium text-brown-dark mb-2"
                         >
                           Email <span className="text-gold">*</span>
                         </label>
@@ -327,16 +328,16 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="you@example.com"
-                          className="w-full rounded-xl border border-cream-dark bg-cream/30 px-4 py-3 text-black-soft placeholder:text-gray-light outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all"
+                          className="w-full rounded-xl border border-cream-dark bg-cream/30 px-4 py-3 text-brown-dark placeholder:text-brown-light outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all"
                         />
                       </div>
                       <div>
                         <label
                           htmlFor="phone"
-                          className="block text-sm font-medium text-black-soft mb-2"
+                          className="block text-sm font-medium text-brown-dark mb-2"
                         >
                           Phone{" "}
-                          <span className="text-gray-light">
+                          <span className="text-brown-light">
                             (optional)
                           </span>
                         </label>
@@ -347,7 +348,7 @@ export default function ContactPage() {
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="+265 ..."
-                          className="w-full rounded-xl border border-cream-dark bg-cream/30 px-4 py-3 text-black-soft placeholder:text-gray-light outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all"
+                          className="w-full rounded-xl border border-cream-dark bg-cream/30 px-4 py-3 text-brown-dark placeholder:text-brown-light outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all"
                         />
                       </div>
                     </div>
@@ -356,7 +357,7 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="message"
-                        className="block text-sm font-medium text-black-soft mb-2"
+                        className="block text-sm font-medium text-brown-dark mb-2"
                       >
                         Message <span className="text-gold">*</span>
                       </label>
@@ -368,7 +369,7 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="How can we help you?"
-                        className="w-full rounded-xl border border-cream-dark bg-cream/30 px-4 py-3 text-black-soft placeholder:text-gray-light outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all resize-none"
+                        className="w-full rounded-xl border border-cream-dark bg-cream/30 px-4 py-3 text-brown-dark placeholder:text-brown-light outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all resize-none"
                       />
                     </div>
 

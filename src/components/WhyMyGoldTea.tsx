@@ -1,44 +1,100 @@
+import Image from "next/image";
+
 const differentiators = [
-  { title: "Ideal Climate", short: "Warm & humid conditions for rich, full-bodied flavor" },
-  { title: "Well-Drained Soils", short: "High-nutrient soil for exceptional depth of taste" },
-  { title: "Ideal Altitude", short: "Cultivated at 600m+ for complex, nuanced flavors" },
-  { title: "Adequate Water", short: "Clean water supply for the healthiest leaves" },
-  { title: "Expert Farming", short: "20+ years of proven quality practices" },
+  {
+    title: "Ideal Climate",
+    short: "Warm & humid conditions for rich, full-bodied flavor",
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Rich Soils",
+    short: "High-nutrient soil for exceptional depth of taste",
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "600m+ Altitude",
+    short: "Cultivated at altitude for complex, nuanced flavors",
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21l6-6m0 0l4 4m-4-4l8-8m0 0l4 4m-4-4V3" />
+      </svg>
+    ),
+  },
+  {
+    title: "Pure Water",
+    short: "Clean water supply for the healthiest leaves",
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3c-4 6-7 9-7 12a7 7 0 1014 0c0-3-3-6-7-12z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Expert Craft",
+    short: "20+ years of proven quality practices",
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+      </svg>
+    ),
+  },
 ];
 
 export default function WhyMyGoldTea() {
   return (
-    <section className="bg-white py-14">
+    <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-cream/70 border border-cream-dark px-6 py-10 sm:px-10 sm:py-12">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-14">
-            {/* Left — Title */}
-            <div className="lg:w-72 flex-shrink-0">
-              <span className="text-xs font-semibold uppercase tracking-widest text-teal">
+        <div className="relative rounded-3xl overflow-hidden">
+          {/* Background image with overlay */}
+          <Image
+            src="/images/hero.jpg"
+            alt="Tea Gardens"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-green-dark/90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-green-dark/95 via-green-dark/85 to-green/70" />
+
+          {/* Decorative accents */}
+          <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-gold-light/10 blur-[80px]" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-green-light/10 blur-[60px]" />
+
+          <div className="relative z-10 px-6 py-12 sm:px-10 sm:py-14">
+            {/* Header */}
+            <div className="text-center mb-10">
+              <span className="text-xs font-semibold uppercase tracking-widest text-gold-light">
                 What Makes Us Different
               </span>
-              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-black-soft leading-snug">
+              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-white leading-snug">
                 Why Our Tea Tastes{" "}
-                <span className="text-gold">So Good</span>
+                <span className="text-gold-light italic">So Good</span>
               </h2>
             </div>
 
-            {/* Right — Compact pills */}
-            <div className="flex flex-wrap gap-3">
+            {/* Differentiators grid */}
+            <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-4">
               {differentiators.map((item) => (
                 <div
                   key={item.title}
-                  className="group flex items-center gap-3 rounded-2xl bg-white border border-cream-dark px-5 py-3.5 hover:border-teal/30 hover:shadow-md transition-all duration-300"
+                  className="group text-center rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-6 hover:bg-white/15 hover:border-gold-light/30 transition-all duration-300"
                 >
-                  <div className="w-2 h-2 rounded-full bg-gradient-to-br from-gold to-teal flex-shrink-0" />
-                  <div>
-                    <span className="text-sm font-semibold text-black-soft">
-                      {item.title}
-                    </span>
-                    <span className="hidden sm:inline text-sm text-gray">
-                      {" "}— {item.short}
-                    </span>
+                  <div className="mx-auto w-10 h-10 rounded-xl bg-gold-light/20 text-gold-light flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                    {item.icon}
                   </div>
+                  <h3 className="text-sm font-semibold text-white mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-white/60 leading-relaxed">
+                    {item.short}
+                  </p>
                 </div>
               ))}
             </div>

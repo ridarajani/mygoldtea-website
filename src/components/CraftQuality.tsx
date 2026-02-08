@@ -35,20 +35,20 @@ export default function CraftQuality() {
   return (
     <section
       id="quality"
-      className="relative bg-black-rich py-24 text-white overflow-hidden"
+      className="relative bg-green-dark py-24 text-white overflow-hidden"
     >
-      {/* Background image with overlay */}
+      {/* Background image with warm green overlay */}
       <Image
         src="/images/hero.jpg"
         alt=""
         fill
         className="object-cover opacity-10"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black-rich via-black-rich/95 to-black-rich" />
+      <div className="absolute inset-0 bg-gradient-to-b from-green-dark via-green-dark/95 to-green-dark" />
 
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-teal/15 rounded-full blur-[100px]" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold/8 rounded-full blur-[120px]" />
+      {/* Decorative warm blurs */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-green-light/15 rounded-full blur-[100px]" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-[120px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -56,8 +56,8 @@ export default function CraftQuality() {
           <span className="text-sm font-semibold uppercase tracking-widest text-gold-light">
             Our Process
           </span>
-          <h2 className="mt-3 text-4xl sm:text-5xl font-bold">
-            Craft & <span className="text-gold">Quality</span>
+          <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-white">
+            Craft &amp; <span className="text-gold-light italic">Quality</span>
           </h2>
           <p className="mt-4 text-lg text-white/60">
             From garden to cup — every step is guided by our commitment to
@@ -83,16 +83,16 @@ export default function CraftQuality() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-3 left-3 text-3xl font-bold text-gold/40">
+                  <div className="absolute inset-0 bg-gradient-to-t from-green-dark/60 to-transparent" />
+                  <div className="absolute bottom-3 left-3 text-3xl font-bold text-gold-light/40 font-serif">
                     {item.step}
                   </div>
                 </div>
 
-                <h3 className="text-xl font-semibold text-gold">
+                <h3 className="text-xl font-semibold text-gold-light font-serif">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-white/50 leading-relaxed">
+                <p className="mt-3 text-white/55 leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -110,11 +110,11 @@ export default function CraftQuality() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black-rich/80 hidden lg:block" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black-rich/80 to-transparent lg:hidden" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-green-dark/80 hidden lg:block" />
+              <div className="absolute inset-0 bg-gradient-to-t from-green-dark/80 to-transparent lg:hidden" />
             </div>
             <div className="lg:col-span-3 p-8 sm:p-12">
-              <h3 className="text-2xl font-bold text-gold">
+              <h3 className="text-2xl font-bold text-gold-light font-serif">
                 Our Quality Promise
               </h3>
               <p className="mt-4 max-w-2xl text-white/60 leading-relaxed">

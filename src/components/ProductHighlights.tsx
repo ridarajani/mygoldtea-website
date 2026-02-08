@@ -64,13 +64,13 @@ export default function ProductHighlights() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-sm font-semibold uppercase tracking-widest text-teal">
+          <span className="text-sm font-semibold uppercase tracking-widest text-green">
             Our Collection
           </span>
-          <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-black-soft">
-            Discover Our <span className="text-gold-dark">Product Range</span>
+          <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-brown-dark">
+            Discover Our <span className="text-gold-dark italic">Product Range</span>
           </h2>
-          <p className="mt-4 text-lg text-gray">
+          <p className="mt-4 text-lg text-brown">
             Discover a range of exceptional tea varieties and snacks that suit
             your taste preference.
           </p>
@@ -81,36 +81,35 @@ export default function ProductHighlights() {
           {teaProducts.map((product) => (
             <div
               key={product.name}
-              className="group rounded-3xl bg-cream overflow-hidden border border-cream-dark hover:border-teal/30 hover:shadow-2xl hover:shadow-teal/5 transition-all duration-500"
+              className="group rounded-3xl bg-cream overflow-hidden border border-cream-dark hover:border-gold/30 hover:shadow-xl transition-all duration-500"
             >
               {/* Product Image */}
-              <div className="relative h-52 overflow-hidden bg-gradient-to-br from-cream to-cream-dark">
+              <div className="relative h-52 overflow-hidden bg-gradient-to-br from-cream to-beige">
                 <Image
                   src={product.image}
                   alt={product.name}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 {product.badge && (
-                  <span className="absolute top-4 left-4 rounded-full bg-white/95 backdrop-blur-sm px-4 py-1.5 text-xs font-semibold text-teal shadow-sm">
+                  <span className="absolute top-4 left-4 rounded-full bg-white/95 backdrop-blur-sm px-4 py-1.5 text-xs font-semibold text-green shadow-sm">
                     {product.badge}
                   </span>
                 )}
-                <span className="absolute top-4 right-4 rounded-full bg-black-rich/70 backdrop-blur-sm px-3 py-1 text-xs font-medium text-white">
+                <span className="absolute top-4 right-4 rounded-full bg-green-dark/70 backdrop-blur-sm px-3 py-1 text-xs font-medium text-white">
                   {product.size}
                 </span>
               </div>
 
               {/* Product Info */}
               <div className="p-6">
-                <span className="text-xs font-semibold uppercase tracking-wider text-teal">
+                <span className="text-xs font-semibold uppercase tracking-wider text-green">
                   {product.category}
                 </span>
-                <h3 className="mt-2 text-lg font-semibold text-black-soft">
+                <h3 className="mt-2 text-lg font-semibold text-brown-dark">
                   {product.name}
                 </h3>
-                <p className="mt-2 text-sm text-gray leading-relaxed">
+                <p className="mt-2 text-sm text-brown leading-relaxed">
                   {product.description}
                 </p>
               </div>
@@ -122,7 +121,7 @@ export default function ProductHighlights() {
         <div className="mt-12 text-center">
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-white font-semibold hover:bg-gold-dark transition-colors shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 rounded-full bg-green px-8 py-3.5 text-white font-semibold hover:bg-green-dark transition-colors shadow-lg shadow-green/15 hover:shadow-xl"
           >
             View All Products
             <svg

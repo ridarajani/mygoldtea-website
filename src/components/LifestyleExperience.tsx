@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function LifestyleExperience() {
   return (
-    <section className="bg-cream py-24 overflow-hidden">
+    <section className="bg-beige py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left — lifestyle visual collage */}
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <div className="rounded-2xl overflow-hidden h-48 shadow-lg">
+                <div className="rounded-2xl overflow-hidden h-48 shadow-md shadow-brown/10">
                   <Image
                     src="/images/hero.jpg"
                     alt="Fresh tea being poured"
@@ -18,7 +18,7 @@ export default function LifestyleExperience() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="rounded-2xl overflow-hidden h-64 shadow-lg">
+                <div className="rounded-2xl overflow-hidden h-64 shadow-md shadow-brown/10">
                   <Image
                     src="/images/lifestyle.jpg"
                     alt="MyGold Tea product with steaming cup"
@@ -29,7 +29,7 @@ export default function LifestyleExperience() {
                 </div>
               </div>
               <div className="space-y-4 pt-8">
-                <div className="rounded-2xl overflow-hidden h-64 shadow-lg">
+                <div className="rounded-2xl overflow-hidden h-64 shadow-md shadow-brown/10">
                   <Image
                     src="/images/cookies-overview.png"
                     alt="MyGold Cookies range"
@@ -38,7 +38,7 @@ export default function LifestyleExperience() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="rounded-2xl overflow-hidden h-48 shadow-lg relative">
+                <div className="rounded-2xl overflow-hidden h-48 shadow-md shadow-brown/10 relative">
                   <Image
                     src="/images/rice-overview.png"
                     alt="MyGold Kilombero Rice"
@@ -46,7 +46,7 @@ export default function LifestyleExperience() {
                     height={200}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-green-dark/50 to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <span className="text-sm font-semibold text-white tracking-wider uppercase">
                       More Than Just Tea
@@ -59,15 +59,15 @@ export default function LifestyleExperience() {
 
           {/* Right — content */}
           <div>
-            <span className="text-sm font-semibold uppercase tracking-widest text-teal">
+            <span className="text-sm font-semibold uppercase tracking-widest text-green">
               The Experience
             </span>
-            <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-black-soft leading-tight">
+            <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-brown-dark leading-tight">
               More Than a Cup.
               <br />
-              <span className="text-gold">A Feeling.</span>
+              <span className="text-gold-dark italic">A Feeling.</span>
             </h2>
-            <p className="mt-6 text-lg text-gray leading-relaxed">
+            <p className="mt-6 text-lg text-brown leading-relaxed">
               Experience the exquisite aroma and taste of superior quality
               organic tea. Every sip of MyGold Tea delivers a feeling of
               refreshingness — a moment of pure indulgence.
@@ -90,15 +90,15 @@ export default function LifestyleExperience() {
               ].map((item) => (
                 <div key={item.title} className="flex gap-4">
                   <div className="flex-shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full bg-teal/15 flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-teal" />
+                    <div className="w-6 h-6 rounded-full bg-green/15 flex items-center justify-center">
+                      <div className="w-2 h-2 rounded-full bg-green" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-black-soft">
+                    <h3 className="font-semibold text-brown-dark">
                       {item.title}
                     </h3>
-                    <p className="mt-1 text-gray">{item.desc}</p>
+                    <p className="mt-1 text-brown">{item.desc}</p>
                   </div>
                 </div>
               ))}

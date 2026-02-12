@@ -1,41 +1,43 @@
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const facts = [
   {
     emoji: "🌍",
     fact: "Tea is the second most consumed beverage in the world, after water.",
     highlight: true,
-    image: "/images/products-overview.png",
+    image: `${basePath}/images/products-overview.png`,
   },
   {
     emoji: "🌱",
     fact: "All types of tea come from the same plant — Camellia sinensis.",
     highlight: false,
-    image: "/images/hero.jpg",
+    image: `${basePath}/images/hero.jpg`,
   },
   {
     emoji: "🏛️",
     fact: "Tea was discovered in China over 5,000 years ago.",
     highlight: false,
-    image: "/images/lifestyle.jpg",
+    image: `${basePath}/images/lifestyle.jpg`,
   },
   {
     emoji: "💰",
     fact: "The world's most expensive tea, Da Hong Pao, sells for up to $1.2M per kg.",
     highlight: true,
-    image: "/images/pure-african-gold.png",
+    image: `${basePath}/images/pure-african-gold.png`,
   },
   {
     emoji: "❤️",
     fact: "Tea can help reduce the risk of heart disease, stroke, and certain cancers.",
     highlight: false,
-    image: "/images/tea-jar.png",
+    image: `${basePath}/images/tea-jar.png`,
   },
   {
     emoji: "🇹🇷",
     fact: "The world's largest tea-drinking nation is Turkey, not England!",
     highlight: false,
-    image: "/images/export-quality-range.png",
+    image: `${basePath}/images/export-quality-range.png`,
   },
 ];
 

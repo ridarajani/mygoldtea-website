@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const differentiators = [
   {
     title: "Ideal Climate",
@@ -55,7 +57,7 @@ export default function WhyMyGoldTea() {
         <div className="relative rounded-3xl overflow-hidden">
           {/* Background image with overlay */}
           <Image
-            src="/images/hero.jpg"
+            src={`${basePath}/images/hero.jpg`}
             alt="Tea Gardens"
             fill
             className="object-cover"

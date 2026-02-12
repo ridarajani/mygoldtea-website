@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function BrandEssence() {
   return (
     <section id="brand" className="bg-cream py-24">
@@ -37,7 +39,7 @@ export default function BrandEssence() {
             {/* Main image */}
             <div className="rounded-3xl overflow-hidden shadow-xl shadow-brown/10">
               <Image
-                src="/images/pure-african-gold.png"
+                src={`${basePath}/images/pure-african-gold.png`}
                 alt="MyGold Pure African Gold 500g"
                 width={560}
                 height={400}
@@ -48,7 +50,7 @@ export default function BrandEssence() {
             {/* Floating card - bottom left */}
             <div className="absolute -bottom-8 -left-4 sm:-left-8 rounded-2xl overflow-hidden shadow-xl shadow-brown/10 border-4 border-cream w-44 sm:w-52 h-36 sm:h-40">
               <Image
-                src="/images/tea-jar.png"
+                src={`${basePath}/images/tea-jar.png`}
                 alt="MyGold Tea Jar"
                 fill
                 className="object-cover"

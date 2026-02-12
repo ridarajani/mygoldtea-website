@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function Hero() {
   return (
     <section
@@ -8,7 +10,7 @@ export default function Hero() {
     >
       {/* Background Image */}
       <Image
-        src="/images/lifestyle.jpg"
+        src={`${basePath}/images/lifestyle.jpg`}
         alt="MyGold Tea"
         fill
         className="object-cover opacity-40"
@@ -75,7 +77,7 @@ export default function Hero() {
               {/* Main product image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/50 border border-white/10">
                 <Image
-                  src="/images/products-overview.png"
+                  src={`${basePath}/images/products-overview.png`}
                   alt="MyGold Tea Complete Product Range"
                   width={600}
                   height={400}
@@ -88,7 +90,7 @@ export default function Hero() {
               {/* Floating product card - top right */}
               <div className="absolute -top-6 -right-6 rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10 w-36 h-36">
                 <Image
-                  src="/images/pure-african-gold.png"
+                  src={`${basePath}/images/pure-african-gold.png`}
                   alt="MyGold Pure African Gold 500g"
                   fill
                   className="object-cover"
@@ -98,7 +100,7 @@ export default function Hero() {
               {/* Floating product card - bottom left */}
               <div className="absolute -bottom-6 -left-6 rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10 w-40 h-32">
                 <Image
-                  src="/images/export-quality-range.png"
+                  src={`${basePath}/images/export-quality-range.png`}
                   alt="MyGold Export Quality Range"
                   fill
                   className="object-cover"

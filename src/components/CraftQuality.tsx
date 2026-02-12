@@ -1,33 +1,35 @@
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const processSteps = [
   {
     step: "01",
     title: "Sourcing",
     description:
       "Hand-selected tea leaves from the finest tea gardens of Malawi, grown at 600+ meters altitude in nutrient-rich volcanic soil.",
-    image: "/images/economy-range.png",
+    image: `${basePath}/images/economy-range.png`,
   },
   {
     step: "02",
     title: "Blending",
     description:
       "Our highly qualified staff craft the supreme blend using time-honored techniques perfected over two decades of expertise.",
-    image: "/images/export-quality-range.png",
+    image: `${basePath}/images/export-quality-range.png`,
   },
   {
     step: "03",
     title: "Quality Control",
     description:
       "Every batch is tested to meet our exacting export quality standards, ensuring consistent aroma, color, and taste.",
-    image: "/images/tea-bags-100.png",
+    image: `${basePath}/images/tea-bags-100.png`,
   },
   {
     step: "04",
     title: "Packaging",
     description:
       "Sealed fresh in premium packaging to preserve the full-bodied flavor and exquisite aroma until it reaches your cup.",
-    image: "/images/tea-bags-25.png",
+    image: `${basePath}/images/tea-bags-25.png`,
   },
 ];
 
@@ -39,7 +41,7 @@ export default function CraftQuality() {
     >
       {/* Background image with warm green overlay */}
       <Image
-        src="/images/hero.jpg"
+        src={`${basePath}/images/hero.jpg`}
         alt=""
         fill
         className="object-cover opacity-10"
@@ -105,7 +107,7 @@ export default function CraftQuality() {
           <div className="grid lg:grid-cols-5 items-center">
             <div className="lg:col-span-2 relative h-48 lg:h-full">
               <Image
-                src="/images/products-overview.png"
+                src={`${basePath}/images/products-overview.png`}
                 alt="MyGold Tea Product Range"
                 fill
                 className="object-cover"

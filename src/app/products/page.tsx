@@ -6,6 +6,8 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const teaProducts = [
   {
     name: "MyGold Pure African Gold",
@@ -13,7 +15,7 @@ const teaProducts = [
     category: "Premium",
     description:
       "Our flagship blend — the finest export quality tea for the true connoisseur. Rich, aromatic, and full-bodied.",
-    image: "/images/pure-african-gold-removebg-preview.png",
+    image: `${basePath}/images/pure-african-gold-removebg-preview.png`,
     badge: "Flagship",
     tab: "Tea Collection",
   },
@@ -23,7 +25,7 @@ const teaProducts = [
     category: "Export",
     description:
       "A supreme export quality blend with rich aroma and an unforgettable taste — available from single-serve to family size.",
-    image: "/images/export-quality-range-removebg-preview.png",
+    image: `${basePath}/images/export-quality-range-removebg-preview.png`,
     badge: "Best Seller",
     tab: "Tea Collection",
   },
@@ -33,7 +35,7 @@ const teaProducts = [
     category: "Value",
     description:
       "Great quality tea at an affordable price — bringing the taste of gold to every Malawian home.",
-    image: "/images/economy-range-removebg-preview.png",
+    image: `${basePath}/images/economy-range-removebg-preview.png`,
     badge: null,
     tab: "Tea Collection",
   },
@@ -43,7 +45,7 @@ const teaProducts = [
     category: "Gift",
     description:
       "Beautifully presented in a reusable glass jar — makes an excellent gift or kitchen centerpiece.",
-    image: "/images/tea-jar-removebg-preview.png",
+    image: `${basePath}/images/tea-jar-removebg-preview.png`,
     badge: "Gift Pick",
     tab: "Tea Collection",
   },
@@ -53,7 +55,7 @@ const teaProducts = [
     category: "Tea Bags",
     description:
       "Malawi's favourite tea in a generous 100-count box — premium convenience for tea lovers.",
-    image: "/images/tea-bags-100-removebg-preview.png",
+    image: `${basePath}/images/tea-bags-100-removebg-preview.png`,
     badge: "Popular",
     tab: "Tea Collection",
   },
@@ -63,7 +65,7 @@ const teaProducts = [
     category: "Tea Bags",
     description:
       "Premium tea in a convenient tagless bag format — 25 bags of pure gold for everyday enjoyment.",
-    image: "/images/tea-bags-25-removebg-preview.png",
+    image: `${basePath}/images/tea-bags-25-removebg-preview.png`,
     badge: null,
     tab: "Tea Collection",
   },
@@ -73,7 +75,7 @@ const teaProducts = [
     category: "Tea Bags",
     description:
       "A handy 50-bag box perfect for home or office — convenience without compromising on quality.",
-    image: "/images/tea-bags-50-removebg-preview.png",
+    image: `${basePath}/images/tea-bags-50-removebg-preview.png`,
     badge: null,
     tab: "Tea Collection",
   },
@@ -86,7 +88,7 @@ const cookieProducts = [
     category: "Cookies & Snacks",
     description:
       "Classic buttery shortbread cookies — perfectly crumbly and delicious with your afternoon tea.",
-    image: "/images/shortbread-cookies-removebg-preview.png",
+    image: `${basePath}/images/shortbread-cookies-removebg-preview.png`,
     badge: null,
     tab: "Cookies & Snacks",
   },
@@ -96,7 +98,7 @@ const cookieProducts = [
     category: "Cookies & Snacks",
     description:
       "Rich chocolate chip cookies baked to perfection — an irresistible treat for chocolate lovers.",
-    image: "/images/chocolate-chip-cookies-removebg-preview.png",
+    image: `${basePath}/images/chocolate-chip-cookies-removebg-preview.png`,
     badge: null,
     tab: "Cookies & Snacks",
   },
@@ -106,7 +108,7 @@ const cookieProducts = [
     category: "Cookies & Snacks",
     description:
       "Tropical coconut-infused cookies with a delightful crunch — a taste of paradise in every bite.",
-    image: "/images/coconut-cookies-removebg-preview.png",
+    image: `${basePath}/images/coconut-cookies-removebg-preview.png`,
     badge: null,
     tab: "Cookies & Snacks",
   },
@@ -116,7 +118,7 @@ const cookieProducts = [
     category: "Cookies & Snacks",
     description:
       "Savoury peanut cookies packed with flavour — the perfect companion to your cup of MyGold Tea.",
-    image: "/images/peanut-cookies-removebg-preview.png",
+    image: `${basePath}/images/peanut-cookies-removebg-preview.png`,
     badge: null,
     tab: "Cookies & Snacks",
   },
@@ -126,7 +128,7 @@ const cookieProducts = [
     category: "Cookies & Snacks",
     description:
       "A generous bag of crispy, crunchy cookies — great for sharing with family and friends.",
-    image: "/images/cookies-bag-removebg-preview.png",
+    image: `${basePath}/images/cookies-bag-removebg-preview.png`,
     badge: null,
     tab: "Cookies & Snacks",
   },
@@ -136,7 +138,7 @@ const cookieProducts = [
     category: "Cookies & Snacks",
     description:
       "Crispy and crunchy cookies in a premium reusable jar — always fresh and ready to enjoy.",
-    image: "/images/cookies-jar-removebg-preview.png",
+    image: `${basePath}/images/cookies-jar-removebg-preview.png`,
     badge: null,
     tab: "Cookies & Snacks",
   },
@@ -149,7 +151,7 @@ const otherProducts = [
     category: "Rice & Essentials",
     description:
       "Smooth, creamy margarine that spreads perfectly — ideal for bread, toast, and baking.",
-    image: "/images/margarine-removebg-preview.png",
+    image: `${basePath}/images/margarine-removebg-preview.png`,
     badge: null,
     tab: "Rice & Essentials",
   },
@@ -159,7 +161,7 @@ const otherProducts = [
     category: "Rice & Essentials",
     description:
       "Premium Kilombero rice in a family-size pack — perfectly fluffy for every meal.",
-    image: "/images/rice-5kg-removebg-preview.png",
+    image: `${basePath}/images/rice-5kg-removebg-preview.png`,
     badge: null,
     tab: "Rice & Essentials",
   },
@@ -169,7 +171,7 @@ const otherProducts = [
     category: "Rice & Essentials",
     description:
       "Premium quality Kilombero rice — perfectly portioned for everyday cooking.",
-    image: "/images/rice-range-removebg-preview.png",
+    image: `${basePath}/images/rice-range-removebg-preview.png`,
     badge: null,
     tab: "Rice & Essentials",
   },

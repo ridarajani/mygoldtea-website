@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/#brand" },
@@ -27,7 +29,7 @@ export default function Footer() {
           <div>
             <Link href="/">
               <Image
-                src="/images/logo.png"
+                src={`${basePath}/images/logo.png`}
                 alt="MyGold Tea"
                 width={140}
                 height={60}

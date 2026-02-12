@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/#brand" },
@@ -104,7 +106,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/logo.png"
+                src={`${basePath}/images/logo.png`}
                 alt="MyGold Tea"
                 width={180}
                 height={78}

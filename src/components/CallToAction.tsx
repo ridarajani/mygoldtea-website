@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function CallToAction() {
   return (
     <section id="cta" className="bg-white py-24">
@@ -7,7 +9,7 @@ export default function CallToAction() {
         <div className="relative rounded-3xl overflow-hidden">
           {/* Background Image */}
           <Image
-            src="/images/products-overview.png"
+            src={`${basePath}/images/products-overview.png`}
             alt="MyGold Tea Products"
             fill
             className="object-cover"

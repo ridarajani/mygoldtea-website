@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function LifestyleExperience() {
   return (
     <section className="bg-beige py-24 overflow-hidden">
@@ -11,7 +13,7 @@ export default function LifestyleExperience() {
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden h-48 shadow-md shadow-brown/10">
                   <Image
-                    src="/images/hero.jpg"
+                    src={`${basePath}/images/hero.jpg`}
                     alt="Fresh tea being poured"
                     width={300}
                     height={200}
@@ -20,7 +22,7 @@ export default function LifestyleExperience() {
                 </div>
                 <div className="rounded-2xl overflow-hidden h-64 shadow-md shadow-brown/10">
                   <Image
-                    src="/images/lifestyle.jpg"
+                    src={`${basePath}/images/lifestyle.jpg`}
                     alt="MyGold Tea product with steaming cup"
                     width={300}
                     height={260}
@@ -31,7 +33,7 @@ export default function LifestyleExperience() {
               <div className="space-y-4 pt-8">
                 <div className="rounded-2xl overflow-hidden h-64 shadow-md shadow-brown/10">
                   <Image
-                    src="/images/cookies-overview.png"
+                    src={`${basePath}/images/cookies-overview.png`}
                     alt="MyGold Cookies range"
                     width={300}
                     height={260}
@@ -40,7 +42,7 @@ export default function LifestyleExperience() {
                 </div>
                 <div className="rounded-2xl overflow-hidden h-48 shadow-md shadow-brown/10 relative">
                   <Image
-                    src="/images/rice-overview.png"
+                    src={`${basePath}/images/rice-overview.png`}
                     alt="MyGold Kilombero Rice"
                     width={300}
                     height={200}

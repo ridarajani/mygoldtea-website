@@ -14,9 +14,16 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
+// Map hash links to their section IDs
+const sectionMap: Record<string, string> = {
+  "/#brand": "brand",
+  "/#quality": "quality",
+};
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -28,9 +35,50 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Track which section is currently in view
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    const sectionIds = Object.values(sectionMap);
+    const observers: IntersectionObserver[] = [];
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveSection(id);
+          }
+        },
+        { rootMargin: "-40% 0px -40% 0px", threshold: 0 }
+      );
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    // Reset to null (Home) when at the top
+    function handleTop() {
+      if (window.scrollY < 200) setActiveSection(null);
+    }
+    window.addEventListener("scroll", handleTop, { passive: true });
+
+    return () => {
+      observers.forEach((o) => o.disconnect());
+      window.removeEventListener("scroll", handleTop);
+    };
+  }, [pathname]);
+
   function isActive(href: string) {
+    // On the home page, use section-based tracking
+    if (pathname === "/") {
+      const sectionId = sectionMap[href];
+      if (sectionId) return activeSection === sectionId;
+      if (href === "/") return activeSection === null;
+      return false;
+    }
     if (href === "/") return pathname === "/";
-    if (href.startsWith("/#")) return pathname === "/";
     return pathname.startsWith(href);
   }
 
@@ -52,15 +100,15 @@ export default function Navbar() {
       >
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-18 items-center justify-between">
+          <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
                 src="/images/logo.png"
                 alt="MyGold Tea"
-                width={130}
-                height={56}
-                className="h-11 w-auto"
+                width={180}
+                height={78}
+                className="h-16 w-auto"
                 priority
               />
             </Link>
@@ -75,10 +123,10 @@ export default function Navbar() {
                     isActive(link.href)
                       ? scrolled || !isHome
                         ? "text-green-dark bg-green/10"
-                        : "text-white bg-white/15"
+                        : "text-gold-light bg-white/15 font-semibold"
                       : scrolled || !isHome
                         ? "text-brown hover:text-green-dark hover:bg-cream"
-                        : "text-white/80 hover:text-white hover:bg-white/10"
+                        : "text-white hover:text-gold-light hover:bg-white/10"
                   }`}
                 >
                   {link.label}

@@ -8,7 +8,7 @@ const teaProducts = [
     category: "Premium",
     description:
       "Our flagship blend — the finest export quality tea for the true connoisseur.",
-    image: "/images/pure-african-gold.png",
+    image: "/images/pure-african-gold-removebg-preview.png",
     badge: "Flagship",
   },
   {
@@ -17,7 +17,7 @@ const teaProducts = [
     category: "Export",
     description:
       "A supreme export quality blend with rich aroma and an unforgettable taste.",
-    image: "/images/export-quality-range.png",
+    image: "/images/export-quality-range-removebg-preview.png",
     badge: "Best Seller",
   },
   {
@@ -26,7 +26,7 @@ const teaProducts = [
     category: "Tea Bags",
     description:
       "The same premium flavor in a convenient tagless bag — perfect for every day.",
-    image: "/images/tea-bags-100.png",
+    image: "/images/tea-bags-100-removebg-preview.png",
     badge: null,
   },
   {
@@ -35,7 +35,7 @@ const teaProducts = [
     category: "Value",
     description:
       "Great quality tea at an affordable price — bringing gold to every home.",
-    image: "/images/economy-range.png",
+    image: "/images/economy-range-removebg-preview.png",
     badge: null,
   },
   {
@@ -44,7 +44,7 @@ const teaProducts = [
     category: "Gift",
     description:
       "Beautifully packaged in a reusable jar — ideal for gifting or home display.",
-    image: "/images/tea-jar.png",
+    image: "/images/tea-jar-removebg-preview.png",
     badge: "Gift Pick",
   },
   {
@@ -53,7 +53,7 @@ const teaProducts = [
     category: "Snacks",
     description:
       "Delicious cookies crafted to pair perfectly with tea — a snack that completes the experience.",
-    image: "/images/cookies-overview.png",
+    image: "/images/cookies-overview-removebg-preview.png",
     badge: null,
   },
 ];

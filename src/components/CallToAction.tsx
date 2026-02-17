@@ -10,7 +10,7 @@ export default function CallToAction() {
           {/* Background Image */}
           <Image
             src={`${basePath}/images/products-overview.png`}
-            alt="MyGold Tea Products"
+            alt="MyGold Products"
             fill
             className="object-cover"
           />
@@ -23,19 +23,19 @@ export default function CallToAction() {
 
           <div className="relative z-10 px-8 py-16 sm:px-16 sm:py-24 text-center">
             <span className="text-sm font-semibold uppercase tracking-widest text-gold-light">
-              Ready to Experience Gold?
+              Ready to Experience MyGold?
             </span>
             <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-white leading-tight">
-              Taste the Finest Tea
+              Discover Quality Products
               <br />
               <span className="text-gold-light italic">
-                Africa Has to Offer
+                Made in Malawi
               </span>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg text-white/70">
-              Join millions of tea lovers who start their day with MyGold Tea.
-              From the finest tea gardens of Malawi to your cup — experience the
-              supreme blend.
+              Join thousands of families who trust MyGold for their daily
+              essentials — cookies, margarine, rice, snacks, and more. Quality
+              you can taste in every product.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a

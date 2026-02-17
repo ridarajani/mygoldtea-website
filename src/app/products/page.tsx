@@ -177,7 +177,7 @@ const otherProducts = [
   },
 ];
 
-const allProducts = [...teaProducts, ...cookieProducts, ...otherProducts];
+const allProducts = [...cookieProducts, ...otherProducts, ...teaProducts];
 
 const tabs = [
   {
@@ -188,15 +188,6 @@ const tabs = [
       </svg>
     ),
     count: allProducts.length,
-  },
-  {
-    label: "Tea Collection",
-    icon: (
-      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
-      </svg>
-    ),
-    count: teaProducts.length,
   },
   {
     label: "Cookies & Snacks",
@@ -216,13 +207,22 @@ const tabs = [
     ),
     count: otherProducts.length,
   },
+  {
+    label: "Tea Collection",
+    icon: (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
+      </svg>
+    ),
+    count: teaProducts.length,
+  },
 ];
 
 const tabSubtitles: Record<string, string> = {
-  "All Products": "Malawi's most loved tea brand — quality in every cup",
+  "All Products": "Quality food products crafted with pride in Malawi",
+  "Cookies & Snacks": "Delicious cookies and snacks for the whole family",
+  "Rice & Essentials": "Premium margarine and Kilombero rice for every household",
   "Tea Collection": "Premium teas from the finest gardens in Malawi",
-  "Cookies & Snacks": "The perfect companions to your cup of tea",
-  "Rice & Essentials": "Premium quality products for every household",
 };
 
 export default function ProductsPage() {
@@ -266,8 +266,8 @@ export default function ProductsPage() {
             Our <span className="text-gold-light italic">Products</span>
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-white/70">
-            Discover a range of exceptional tea varieties, delicious cookies,
-            and everyday essentials that suit your lifestyle.
+            Discover our range of premium cookies, quality margarine, wholesome
+            rice, delicious snacks, and fine tea — all crafted in Malawi.
           </p>
         </div>
       </section>

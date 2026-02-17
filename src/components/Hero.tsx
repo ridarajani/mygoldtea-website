@@ -34,24 +34,25 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 backdrop-blur-sm px-5 py-2 mb-8">
               <span className="h-2 w-2 rounded-full bg-gold animate-pulse" />
               <span className="text-sm font-medium text-gold-light tracking-wide">
-                African Tea Since 2003
+                Quality Food Products Since 2003
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
-              Your Perfect
+              Taste the
               <br />
-              Cup of{" "}
+              Best of{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-light via-gold to-gold-dark">
-                Gold
+                Africa
               </span>
             </h1>
 
             {/* Subheadline */}
             <p className="mt-6 max-w-lg text-lg sm:text-xl text-white/60 leading-relaxed">
-              Experience the exquisite aroma and taste of superior quality
-              organic tea from the finest tea gardens in Africa.
+              From delicious cookies and premium margarine to wholesome rice
+              and irresistible snacks — discover quality food products
+              crafted with pride in Malawi.
             </p>
 
             {/* CTA Buttons */}
@@ -60,7 +61,7 @@ export default function Hero() {
                 href="#products"
                 className="rounded-full bg-gradient-to-r from-gold to-gold-dark px-8 py-4 text-base font-semibold text-white shadow-lg shadow-gold/25 hover:shadow-xl hover:shadow-gold/30 transition-all"
               >
-                Explore Our Teas
+                Explore Our Products
               </a>
               <a
                 href="#brand"
@@ -78,7 +79,7 @@ export default function Hero() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/50 border border-white/10">
                 <Image
                   src={`${basePath}/images/products-overview.png`}
-                  alt="MyGold Tea Complete Product Range"
+                  alt="MyGold Complete Product Range"
                   width={600}
                   height={400}
                   className="w-full h-auto"
@@ -90,8 +91,8 @@ export default function Hero() {
               {/* Floating product card - top right */}
               <div className="absolute -top-6 -right-6 rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10 w-36 h-36">
                 <Image
-                  src={`${basePath}/images/pure-african-gold.png`}
-                  alt="MyGold Pure African Gold 500g"
+                  src={`${basePath}/images/cookies-overview.png`}
+                  alt="MyGold Cookies Range"
                   fill
                   className="object-cover"
                 />
@@ -100,8 +101,8 @@ export default function Hero() {
               {/* Floating product card - bottom left */}
               <div className="absolute -bottom-6 -left-6 rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10 w-40 h-32">
                 <Image
-                  src={`${basePath}/images/export-quality-range.png`}
-                  alt="MyGold Export Quality Range"
+                  src={`${basePath}/images/rice-overview.png`}
+                  alt="MyGold Kilombero Rice Range"
                   fill
                   className="object-cover"
                 />
@@ -110,7 +111,7 @@ export default function Hero() {
               {/* Floating badge */}
               <div className="absolute bottom-8 right-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 px-5 py-3">
                 <div className="text-2xl font-bold text-gold">#1</div>
-                <div className="text-xs text-white/70">Malawi Tea Brand</div>
+                <div className="text-xs text-white/70">Malawi Food Brand</div>
               </div>
             </div>
           </div>
@@ -121,9 +122,9 @@ export default function Hero() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
             {[
               { value: "20+", label: "Years of Excellence" },
-              { value: "15+", label: "Tea Products" },
-              { value: "600m+", label: "Altitude Grown" },
-              { value: "#1", label: "Malawi Tea Brand" },
+              { value: "25+", label: "Quality Products" },
+              { value: "4", label: "Product Categories" },
+              { value: "#1", label: "Malawi Food Brand" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold-light to-gold">

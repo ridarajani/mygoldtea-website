@@ -13,8 +13,8 @@ export default function LifestyleExperience() {
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden h-48 shadow-md shadow-brown/10">
                   <Image
-                    src={`${basePath}/images/hero.jpg`}
-                    alt="Fresh tea being poured"
+                    src={`${basePath}/images/margarine.png`}
+                    alt="MyGold Margarine"
                     width={300}
                     height={200}
                     className="w-full h-full object-cover"
@@ -22,8 +22,8 @@ export default function LifestyleExperience() {
                 </div>
                 <div className="rounded-2xl overflow-hidden h-64 shadow-md shadow-brown/10">
                   <Image
-                    src={`${basePath}/images/lifestyle.jpg`}
-                    alt="MyGold Tea product with steaming cup"
+                    src={`${basePath}/images/peanuts.jpg`}
+                    alt="MyGold Snacks"
                     width={300}
                     height={260}
                     className="w-full h-full object-cover"
@@ -51,7 +51,7 @@ export default function LifestyleExperience() {
                   <div className="absolute inset-0 bg-gradient-to-t from-green-dark/50 to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <span className="text-sm font-semibold text-white tracking-wider uppercase">
-                      More Than Just Tea
+                      Quality You Can Taste
                     </span>
                   </div>
                 </div>
@@ -65,29 +65,29 @@ export default function LifestyleExperience() {
               The Experience
             </span>
             <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-brown-dark leading-tight">
-              More Than a Cup.
+              More Than Food.
               <br />
-              <span className="text-gold-dark italic">A Feeling.</span>
+              <span className="text-gold-dark italic">A Lifestyle.</span>
             </h2>
             <p className="mt-6 text-lg text-brown leading-relaxed">
-              Experience the exquisite aroma and taste of superior quality
-              organic tea. Every sip of MyGold Tea delivers a feeling of
-              refreshingness — a moment of pure indulgence.
+              From crunchy cookies to fluffy rice, smooth margarine to tasty
+              snacks — every MyGold product is crafted to bring joy to your
+              table and quality to every meal.
             </p>
 
             <div className="mt-8 space-y-6">
               {[
                 {
-                  title: "Exquisite Aroma",
-                  desc: "An inviting scent that sets the tone for a perfect tea experience.",
+                  title: "Delicious Cookies",
+                  desc: "Baked with the finest ingredients — shortbread, chocolate chip, coconut, and peanut varieties.",
                 },
                 {
-                  title: "Superior Taste",
-                  desc: "Full-bodied, smooth, and refreshing — the hallmark of a supreme blend.",
+                  title: "Premium Margarine & Rice",
+                  desc: "Smooth margarine for every recipe and aromatic Kilombero rice for the perfect meal.",
                 },
                 {
-                  title: "Premium Quality",
-                  desc: "Export quality tea that competes with the world's finest brands.",
+                  title: "Trusted Quality",
+                  desc: "Over 20 years of delivering products that Malawian families love and trust.",
                 },
               ].map((item) => (
                 <div key={item.title} className="flex gap-4">

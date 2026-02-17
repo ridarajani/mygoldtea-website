@@ -4,114 +4,116 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Fun Tea Facts — MyGold Tea",
+  title: "Fun Food Facts — MyGold",
   description:
-    "Discover 16 fascinating tea facts — from ancient origins to modern-day surprises. Learn why tea is the world's most loved beverage.",
+    "Discover 16 fascinating food facts — from cookies and rice to margarine and snacks. Learn fun things about the foods we enjoy every day.",
 };
 
 const facts = [
   {
-    emoji: "🌍",
-    fact: "Tea is the second most consumed beverage in the world, after water.",
-    category: "Global",
+    emoji: "🍪",
+    fact: "The chocolate chip cookie was invented by accident in 1938 by Ruth Wakefield — and became the world's most popular cookie.",
+    category: "Cookies",
     size: "featured",
   },
   {
-    emoji: "🌱",
-    fact: "All types of tea come from the same plant, Camellia sinensis.",
-    category: "Science",
+    emoji: "🌾",
+    fact: "Rice feeds more than half of the world's population and is grown on every continent except Antarctica.",
+    category: "Rice",
     size: "normal",
   },
   {
-    emoji: "🍵",
-    fact: "There are four main types of tea: black, green, oolong, and white.",
-    category: "Varieties",
+    emoji: "🧈",
+    fact: "Margarine was invented in France in 1869 by Hippolyte Mège-Mouriès as an affordable butter alternative.",
+    category: "Margarine",
     size: "normal",
   },
   {
-    emoji: "🏛️",
-    fact: "Tea was discovered in China over 5,000 years ago.",
-    category: "History",
+    emoji: "🥜",
+    fact: "Peanuts are not actually nuts — they are legumes that grow underground, related to beans and lentils.",
+    category: "Snacks",
     size: "wide",
   },
   {
-    emoji: "💊",
-    fact: "In ancient China, tea was used for medicinal purposes.",
-    category: "Health",
+    emoji: "🇲🇼",
+    fact: "Malawi's Kilombero rice is named after the Kilombero Valley and is prized for its aromatic fragrance.",
+    category: "Rice",
     size: "normal",
   },
   {
-    emoji: "💰",
-    fact: "The world's most expensive tea is Da Hong Pao, a rare Chinese tea that can sell for up to $1.2 million per kilogram.",
+    emoji: "🏆",
+    fact: "The world's largest cookie ever baked weighed over 40,000 pounds and was made in Flat Rock, North Carolina in 2003.",
     category: "Record",
     size: "wide",
   },
   {
-    emoji: "🛡️",
-    fact: "Tea contains antioxidants, which are beneficial for health.",
+    emoji: "💪",
+    fact: "Peanuts contain more protein per serving than any tree nut, making them one of the most nutritious snacks.",
     category: "Health",
     size: "normal",
   },
   {
-    emoji: "❤️",
-    fact: "Tea can help to reduce the risk of heart disease, stroke, and certain types of cancer.",
-    category: "Health",
-    size: "normal",
-  },
-  {
-    emoji: "🇨🇳",
-    fact: "The largest tea-producing country in the world is China.",
+    emoji: "🌍",
+    fact: "Over 500 million metric tons of rice are consumed worldwide each year — making it the most eaten grain.",
     category: "Global",
     size: "normal",
   },
   {
-    emoji: "🥛",
-    fact: "The practice of adding milk to tea was popularized in 18th century England.",
-    category: "History",
-    size: "wide",
-  },
-  {
-    emoji: "🇺🇸",
-    fact: "The first tea bags were invented in the United States in 1908 by Thomas Sullivan.",
-    category: "History",
+    emoji: "🥥",
+    fact: "Coconut cookies originated in tropical regions and have become a beloved treat across Africa and beyond.",
+    category: "Cookies",
     size: "normal",
   },
   {
-    emoji: "🇹🇷",
-    fact: "The world's largest tea-drinking nation is Turkey.",
-    category: "Global",
-    size: "normal",
-  },
-  {
-    emoji: "⚓",
-    fact: "The Boston Tea Party was a political protest against British taxes on tea in 1773 that played a role in the American Revolution.",
-    category: "History",
+    emoji: "🧑‍🍳",
+    fact: "Margarine is used in more baking recipes than butter worldwide due to its consistent texture and lower cost.",
+    category: "Margarine",
     size: "wide",
   },
   {
-    emoji: "🇯🇵",
-    fact: "In Japan, there is a traditional tea ceremony called Chanoyu.",
+    emoji: "🍚",
+    fact: "In many African countries, rice is a symbol of prosperity and is served at celebrations and special occasions.",
     category: "Culture",
     size: "normal",
   },
   {
-    emoji: "🏪",
-    fact: "The world's oldest tea company, Twinings, was founded in London in 1706.",
+    emoji: "🌱",
+    fact: "Shortbread cookies date back to 12th century Scotland and were originally made with leftover bread dough.",
     category: "History",
     size: "normal",
   },
   {
-    emoji: "🇮🇳",
-    fact: "In India, masala chai is a popular tea beverage made with spices like cinnamon, ginger, and cardamom.",
+    emoji: "🏭",
+    fact: "Modern margarine is made from vegetable oils and is fortified with vitamins A and D for added nutrition.",
+    category: "Health",
+    size: "wide",
+  },
+  {
+    emoji: "🎉",
+    fact: "December 4th is National Cookie Day — celebrated with cookie giveaways and baking events worldwide.",
+    category: "Culture",
+    size: "normal",
+  },
+  {
+    emoji: "🌿",
+    fact: "MyGold has been crafting quality food products in Malawi since 2003, serving families across the country.",
+    category: "Global",
+    size: "normal",
+  },
+  {
+    emoji: "❤️",
+    fact: "Sharing food brings people together — and MyGold products are found on family tables across Malawi every day.",
     category: "Culture",
     size: "normal",
   },
 ];
 
 const categoryStyles: Record<string, { bg: string; text: string; accent: string }> = {
+  Cookies: { bg: "bg-gold/10", text: "text-gold-dark", accent: "from-gold to-gold-light" },
+  Rice: { bg: "bg-green/10", text: "text-green", accent: "from-green to-green-light" },
+  Margarine: { bg: "bg-gold-light/20", text: "text-brown-dark", accent: "from-gold-dark to-gold" },
+  Snacks: { bg: "bg-green-light/15", text: "text-green-dark", accent: "from-green-dark to-green" },
   Global: { bg: "bg-green/10", text: "text-green", accent: "from-green to-green-light" },
-  Science: { bg: "bg-green-light/15", text: "text-green-dark", accent: "from-green-dark to-green" },
-  Varieties: { bg: "bg-gold/10", text: "text-gold-dark", accent: "from-gold to-gold-light" },
   History: { bg: "bg-gold-light/20", text: "text-brown-dark", accent: "from-gold-dark to-gold" },
   Health: { bg: "bg-green/10", text: "text-green-dark", accent: "from-green to-green-dark" },
   Record: { bg: "bg-gold/15", text: "text-gold-dark", accent: "from-gold to-gold-dark" },
@@ -148,12 +150,12 @@ export default function FunFactsPage() {
             Back to Home
           </Link>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
-            Fun Tea <span className="text-gold-light italic">Facts</span>
+            Fun Food <span className="text-gold-light italic">Facts</span>
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-white/70">
-            Tea is more than just a drink — it&apos;s a 5,000-year-old story
-            of culture, health, and discovery. Here are 16 fascinating facts
-            every tea lover should know.
+            From cookies and rice to margarine and snacks — food is more
+            than just nutrition. Here are 16 fascinating facts about the
+            foods we enjoy every day.
           </p>
         </div>
       </section>
@@ -188,10 +190,10 @@ export default function FunFactsPage() {
           {/* Section header */}
           <div className="text-center mb-14">
             <span className="text-sm font-semibold uppercase tracking-widest text-green">
-              16 Facts Every Tea Lover Should Know
+              16 Facts Every Food Lover Should Know
             </span>
             <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-brown-dark">
-              Discover the World of <span className="text-gold-dark italic">Tea</span>
+              Discover the World of <span className="text-gold-dark italic">Food</span>
             </h2>
           </div>
 
@@ -243,10 +245,10 @@ export default function FunFactsPage() {
           {/* Stats bar */}
           <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { label: "Years of Tea History", value: "5,000+" },
-              { label: "Types of Tea Worldwide", value: "1,500+" },
-              { label: "Daily Cups Consumed", value: "3.7B" },
-              { label: "Countries Growing Tea", value: "50+" },
+              { label: "Years of Cookie History", value: "800+" },
+              { label: "Rice Varieties Worldwide", value: "40,000+" },
+              { label: "Tons of Rice Consumed Yearly", value: "500M+" },
+              { label: "Countries Growing Rice", value: "100+" },
             ].map((stat) => (
               <div key={stat.label} className="rounded-2xl bg-gradient-to-br from-green-dark to-green p-5 text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-gold-light">{stat.value}</div>
@@ -261,11 +263,12 @@ export default function FunFactsPage() {
             <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-green-light/10 blur-[60px]" />
             <div className="relative z-10">
               <h2 className="text-2xl sm:text-3xl font-bold text-white">
-                Ready to Taste the Best Tea in Africa?
+                Ready to Try the Best of Malawi?
               </h2>
               <p className="mt-3 text-white/70 max-w-xl mx-auto">
-                Now that you know all about tea, experience the supreme blend of
-                MyGold Tea — straight from the finest gardens of Malawi.
+                Now that you know all about these amazing foods, experience the
+                quality of MyGold — cookies, margarine, rice, and snacks crafted
+                with pride in Malawi.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link

@@ -15,16 +15,16 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "MyGold Tea — Your Perfect Cup of Tea",
+  title: "MyGold — Premium Cookies, Margarine, Rice & Snacks from Malawi",
   description:
-    "Experience the exquisite aroma and taste of superior quality organic tea from the finest tea gardens in Africa. MyGold Tea is Malawi's most loved tea brand.",
+    "Discover MyGold's range of premium cookies, quality margarine, wholesome Kilombero rice, and delicious snacks. Malawi's most trusted food brand since 2003.",
   keywords: [
-    "MyGold Tea",
-    "Malawi tea",
-    "African tea",
-    "organic tea",
-    "premium tea",
-    "export quality tea",
+    "MyGold",
+    "MyGold cookies",
+    "Malawi margarine",
+    "Kilombero rice",
+    "African snacks",
+    "premium food products Malawi",
   ],
 };
 

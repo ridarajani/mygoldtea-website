@@ -7,29 +7,29 @@ const processSteps = [
     step: "01",
     title: "Sourcing",
     description:
-      "Hand-selected tea leaves from the finest tea gardens of Malawi, grown at 600+ meters altitude in nutrient-rich volcanic soil.",
-    image: `${basePath}/images/economy-range.png`,
+      "We carefully select the finest local ingredients — from premium wheat flour for our cookies to aromatic Kilombero rice from Malawi's fertile plains.",
+    image: `${basePath}/images/rice-overview.png`,
   },
   {
     step: "02",
-    title: "Blending",
+    title: "Crafting",
     description:
-      "Our highly qualified staff craft the supreme blend using time-honored techniques perfected over two decades of expertise.",
-    image: `${basePath}/images/export-quality-range.png`,
+      "Our skilled team uses time-tested recipes and modern techniques to create cookies, margarine, and snacks with consistently great taste.",
+    image: `${basePath}/images/cookies-overview.png`,
   },
   {
     step: "03",
     title: "Quality Control",
     description:
-      "Every batch is tested to meet our exacting export quality standards, ensuring consistent aroma, color, and taste.",
-    image: `${basePath}/images/tea-bags-100.png`,
+      "Every batch is rigorously tested to meet our high standards — ensuring consistent quality, freshness, and flavor in every product.",
+    image: `${basePath}/images/margarine.png`,
   },
   {
     step: "04",
     title: "Packaging",
     description:
-      "Sealed fresh in premium packaging to preserve the full-bodied flavor and exquisite aroma until it reaches your cup.",
-    image: `${basePath}/images/tea-bags-25.png`,
+      "Sealed fresh in premium packaging to lock in flavor and freshness, ensuring every product reaches you in perfect condition.",
+    image: `${basePath}/images/cookies-bag.png`,
   },
 ];
 
@@ -62,8 +62,8 @@ export default function CraftQuality() {
             Craft &amp; <span className="text-gold-light italic">Quality</span>
           </h2>
           <p className="mt-4 text-lg text-white/60">
-            From garden to cup — every step is guided by our commitment to
-            delivering the finest tea experience.
+            From sourcing to shelf — every step is guided by our commitment to
+            delivering the finest food products to your table.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export default function CraftQuality() {
             <div className="lg:col-span-2 relative h-48 lg:h-full">
               <Image
                 src={`${basePath}/images/products-overview.png`}
-                alt="MyGold Tea Product Range"
+                alt="MyGold Product Range"
                 fill
                 className="object-cover"
               />
@@ -120,10 +120,10 @@ export default function CraftQuality() {
                 Our Quality Promise
               </h3>
               <p className="mt-4 max-w-2xl text-white/60 leading-relaxed">
-                MyGold Tea is an indigenous product of Malawi — the supreme blend of
-                tea of which the smell and taste give a feeling of refreshingness to
-                anyone who drinks it. We are committed to making this unique export
-                quality blend for Malawian people and tea lovers worldwide.
+                MyGold is an indigenous brand of Malawi — bringing you premium cookies,
+                quality margarine, wholesome rice, and delicious snacks. We are committed
+                to delivering exceptional food products for Malawian families and food
+                lovers worldwide.
               </p>
             </div>
           </div>

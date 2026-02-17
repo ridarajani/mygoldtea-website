@@ -3,59 +3,59 @@ import Link from "next/link";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-const teaProducts = [
+const featuredProducts = [
   {
-    name: "MyGold Pure African Gold",
-    size: "500g",
-    category: "Premium",
+    name: "MyGold Shortbread Cookies",
+    size: "150g – 500g",
+    category: "Cookies",
     description:
-      "Our flagship blend — the finest export quality tea for the true connoisseur.",
-    image: `${basePath}/images/pure-african-gold-removebg-preview.png`,
-    badge: "Flagship",
-  },
-  {
-    name: "MyGold Export Quality",
-    size: "7g – 125g",
-    category: "Export",
-    description:
-      "A supreme export quality blend with rich aroma and an unforgettable taste.",
-    image: `${basePath}/images/export-quality-range-removebg-preview.png`,
+      "Crispy, buttery shortbread cookies baked to perfection — a family favorite for every occasion.",
+    image: `${basePath}/images/shortbread-cookies-removebg-preview.png`,
     badge: "Best Seller",
   },
   {
-    name: "MyGold Tea Bags",
-    size: "25 – 100 PCS",
-    category: "Tea Bags",
+    name: "MyGold Chocolate Chip Cookies",
+    size: "150g – 500g",
+    category: "Cookies",
     description:
-      "The same premium flavor in a convenient tagless bag — perfect for every day.",
-    image: `${basePath}/images/tea-bags-100-removebg-preview.png`,
+      "Rich chocolate chips in every bite — the perfect treat for chocolate lovers.",
+    image: `${basePath}/images/chocolate-chip-cookies-removebg-preview.png`,
+    badge: "Popular",
+  },
+  {
+    name: "MyGold Margarine",
+    size: "250g – 1kg",
+    category: "Margarine",
+    description:
+      "Smooth, creamy margarine ideal for cooking, baking, and spreading — quality you can taste.",
+    image: `${basePath}/images/margarine-removebg-preview.png`,
+    badge: "Essential",
+  },
+  {
+    name: "MyGold Kilombero Rice",
+    size: "5kg",
+    category: "Rice",
+    description:
+      "Premium Kilombero rice grown in Malawi's fertile plains — fluffy, aromatic, and wholesome.",
+    image: `${basePath}/images/rice-5kg-removebg-preview.png`,
+    badge: "Premium",
+  },
+  {
+    name: "MyGold Coconut Cookies",
+    size: "150g – 500g",
+    category: "Cookies",
+    description:
+      "Delightful coconut-flavored cookies with a tropical twist — crunchy and irresistible.",
+    image: `${basePath}/images/coconut-cookies-removebg-preview.png`,
     badge: null,
   },
   {
-    name: "MyGold Economy Tea",
-    size: "50g & 125g",
-    category: "Value",
-    description:
-      "Great quality tea at an affordable price — bringing gold to every home.",
-    image: `${basePath}/images/economy-range-removebg-preview.png`,
-    badge: null,
-  },
-  {
-    name: "MyGold Tea Jar",
-    size: "200g",
-    category: "Gift",
-    description:
-      "Beautifully packaged in a reusable jar — ideal for gifting or home display.",
-    image: `${basePath}/images/tea-jar-removebg-preview.png`,
-    badge: "Gift Pick",
-  },
-  {
-    name: "MyGold Cookies",
+    name: "MyGold Peanut Cookies",
     size: "150g – 500g",
     category: "Snacks",
     description:
-      "Delicious cookies crafted to pair perfectly with tea — a snack that completes the experience.",
-    image: `${basePath}/images/cookies-overview-removebg-preview.png`,
+      "Roasted peanut cookies packed with protein and flavor — a nutritious snack for the whole family.",
+    image: `${basePath}/images/peanut-cookies-removebg-preview.png`,
     badge: null,
   },
 ];
@@ -73,14 +73,14 @@ export default function ProductHighlights() {
             Discover Our <span className="text-gold-dark italic">Product Range</span>
           </h2>
           <p className="mt-4 text-lg text-brown">
-            Discover a range of exceptional tea varieties and snacks that suit
-            your taste preference.
+            Explore our range of premium cookies, quality margarine, wholesome
+            rice, and delicious snacks crafted for every taste.
           </p>
         </div>
 
         {/* Product Grid */}
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teaProducts.map((product) => (
+          {featuredProducts.map((product) => (
             <div
               key={product.name}
               className="group rounded-3xl bg-cream overflow-hidden border border-cream-dark hover:border-gold/30 hover:shadow-xl transition-all duration-500"

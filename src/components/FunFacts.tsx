@@ -4,40 +4,40 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const facts = [
   {
-    emoji: "🌍",
-    fact: "Tea is the second most consumed beverage in the world, after water.",
+    emoji: "🍪",
+    fact: "The chocolate chip cookie was invented by accident in 1938 — and became the world's most popular cookie.",
     highlight: true,
+    image: `${basePath}/images/cookies-overview.png`,
+  },
+  {
+    emoji: "🌾",
+    fact: "Rice feeds more than half of the world's population and is a staple in over 100 countries.",
+    highlight: false,
+    image: `${basePath}/images/rice-overview.png`,
+  },
+  {
+    emoji: "🧈",
+    fact: "Margarine was originally invented in France in 1869 as an affordable alternative to butter.",
+    highlight: false,
+    image: `${basePath}/images/margarine.png`,
+  },
+  {
+    emoji: "🥜",
+    fact: "Peanuts are one of the most protein-rich snacks — containing more protein per serving than any tree nut.",
+    highlight: true,
+    image: `${basePath}/images/peanuts.jpg`,
+  },
+  {
+    emoji: "🇲🇼",
+    fact: "Malawi's Kilombero rice is prized for its aromatic fragrance and fluffy texture when cooked.",
+    highlight: false,
+    image: `${basePath}/images/rice-5kg.png`,
+  },
+  {
+    emoji: "🏆",
+    fact: "MyGold has been crafting quality food products for Malawian families for over 20 years.",
+    highlight: false,
     image: `${basePath}/images/products-overview.png`,
-  },
-  {
-    emoji: "🌱",
-    fact: "All types of tea come from the same plant — Camellia sinensis.",
-    highlight: false,
-    image: `${basePath}/images/hero.jpg`,
-  },
-  {
-    emoji: "🏛️",
-    fact: "Tea was discovered in China over 5,000 years ago.",
-    highlight: false,
-    image: `${basePath}/images/lifestyle.jpg`,
-  },
-  {
-    emoji: "💰",
-    fact: "The world's most expensive tea, Da Hong Pao, sells for up to $1.2M per kg.",
-    highlight: true,
-    image: `${basePath}/images/pure-african-gold.png`,
-  },
-  {
-    emoji: "❤️",
-    fact: "Tea can help reduce the risk of heart disease, stroke, and certain cancers.",
-    highlight: false,
-    image: `${basePath}/images/tea-jar.png`,
-  },
-  {
-    emoji: "🇹🇷",
-    fact: "The world's largest tea-drinking nation is Turkey, not England!",
-    highlight: false,
-    image: `${basePath}/images/export-quality-range.png`,
   },
 ];
 
@@ -57,11 +57,11 @@ export default function FunFacts() {
             Did You Know?
           </span>
           <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-white">
-            Fun Tea <span className="text-gold-light italic">Facts</span>
+            Fun Food <span className="text-gold-light italic">Facts</span>
           </h2>
           <p className="mt-4 text-lg text-white/60">
-            Tea has been shown to have various health benefits. Here are some
-            fascinating facts about the world&apos;s favorite hot drink.
+            From cookies to rice, here are some fascinating facts about
+            the foods we love and the products we make.
           </p>
         </div>
 
@@ -139,14 +139,14 @@ export default function FunFacts() {
         {/* Link to full page */}
         <div className="mt-14 text-center">
           <p className="text-white/40 mb-5">
-            There are over 1,500 types of tea in the world — and so much more to
-            discover.
+            There&apos;s always something new to discover about the foods we enjoy
+            every day.
           </p>
           <a
             href="/fun-facts"
             className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-white font-semibold shadow-lg shadow-gold/20 hover:bg-gold-dark hover:shadow-xl transition-all"
           >
-            Explore All 16 Tea Facts
+            Explore All Fun Facts
             <svg
               className="w-4 h-4"
               fill="none"

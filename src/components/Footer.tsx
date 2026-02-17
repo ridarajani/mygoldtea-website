@@ -8,16 +8,16 @@ const quickLinks = [
   { label: "About Us", href: "/#brand" },
   { label: "Our Products", href: "/products" },
   { label: "Quality", href: "/#quality" },
-  { label: "Tea Facts", href: "/fun-facts" },
+  { label: "Fun Facts", href: "/fun-facts" },
   { label: "Contact Us", href: "/contact" },
 ];
 
 const products = [
-  "MyGold Pure African Gold",
-  "MyGold Export Quality",
-  "MyGold Tagless Tea Bags",
-  "Mulanje Gold",
-  "MyGold Economy",
+  "MyGold Cookies",
+  "MyGold Margarine",
+  "MyGold Kilombero Rice",
+  "MyGold Peanut Snacks",
+  "MyGold Tea",
 ];
 
 export default function Footer() {
@@ -30,15 +30,15 @@ export default function Footer() {
             <Link href="/">
               <Image
                 src={`${basePath}/images/logo.png`}
-                alt="MyGold Tea"
+                alt="MyGold"
                 width={140}
                 height={60}
                 className="h-14 w-auto"
               />
             </Link>
             <p className="mt-4 text-sm text-white/55 leading-relaxed">
-              Malawi&apos;s most loved tea brand. Superior quality tea from the
-              finest tea gardens in Africa.
+              Malawi&apos;s most trusted food brand. Premium cookies, margarine,
+              rice, snacks, and tea — quality you can taste.
             </p>
             {/* Social links */}
             <div className="mt-6 flex gap-4">

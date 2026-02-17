@@ -2,7 +2,7 @@ const milestones = [
   {
     year: "2003",
     title: "Founded",
-    desc: "MyGold Tea brand established in Malawi",
+    desc: "MyGold brand established in Malawi",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21h18M9 8h6M12 8V5m-3 0h6m-9 8h12a2 2 0 002-2V8a2 2 0 00-2-2H6a2 2 0 00-2 2v3a2 2 0 002 2zm0 0v5a2 2 0 002 2h8a2 2 0 002-2v-5" />
@@ -12,7 +12,7 @@ const milestones = [
   {
     year: "2005",
     title: "Expanded",
-    desc: "Extended to multiple tea garden partnerships",
+    desc: "Expanded product range to cookies, margarine, and rice",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -32,7 +32,7 @@ const milestones = [
   {
     year: "2020",
     title: "Market Leader",
-    desc: "Became Malawi's #1 selling tea brand",
+    desc: "Became Malawi's #1 trusted food brand",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -45,7 +45,7 @@ const values = [
   {
     title: "Quality First",
     description:
-      "Every leaf is selected and every blend is crafted to meet our uncompromising standards of excellence.",
+      "Every ingredient is carefully selected and every product is crafted to meet our uncompromising standards of excellence.",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
@@ -56,7 +56,7 @@ const values = [
   {
     title: "African Heritage",
     description:
-      "Proudly rooted in Malawi's rich tea-growing tradition and committed to uplifting local communities.",
+      "Proudly rooted in Malawi's rich agricultural tradition and committed to uplifting local communities.",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -67,7 +67,7 @@ const values = [
   {
     title: "Sustainability",
     description:
-      "Responsible farming practices that protect the land and ensure future generations can enjoy great tea.",
+      "Responsible sourcing practices that protect the land and ensure future generations can enjoy quality food.",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />

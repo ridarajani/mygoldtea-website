@@ -13,24 +13,25 @@ export default function BrandEssence() {
               Our Story
             </span>
             <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-brown-dark leading-tight">
-              An Indigenous Product
+              Quality Food Products
               <br />
-              <span className="text-gold-dark italic">of Malawi</span>
+              <span className="text-gold-dark italic">from Malawi</span>
             </h2>
             <p className="mt-6 text-lg text-brown leading-relaxed">
-              MyGold Tea is Malawi&apos;s most loved tea brand that prides
-              itself on superior quality tea from the finest tea gardens in
-              Africa. The tea leaves used in the blending of MyGold Tea are
-              carefully collected from the finest tea gardens of Malawi.
+              MyGold is Malawi&apos;s most trusted food brand, offering a wide
+              range of quality products — from delicious cookies and premium
+              margarine to wholesome Kilombero rice and tasty snacks. Every
+              product is crafted with care using the finest local ingredients.
             </p>
             <p className="mt-4 text-lg text-brown leading-relaxed">
-              MyGold Tea is the supreme blend of tea of which the smell and taste
-              give a feeling of refreshingness to anyone who drinks it.
+              Whether it&apos;s our crunchy shortbread cookies, smooth
+              margarine, or aromatic rice, each MyGold product delivers the
+              quality and taste that families across Malawi love and trust.
             </p>
             <p className="mt-4 text-brown-light">
               It is the endeavor of our highly qualified staff who work very hard
-              for making this unique export quality blend for Malawian people and
-              other tea lovers around the world.
+              to bring you the finest food products for Malawian families and
+              food lovers around the world.
             </p>
           </div>
 
@@ -39,8 +40,8 @@ export default function BrandEssence() {
             {/* Main image */}
             <div className="rounded-3xl overflow-hidden shadow-xl shadow-brown/10">
               <Image
-                src={`${basePath}/images/pure-african-gold.png`}
-                alt="MyGold Pure African Gold 500g"
+                src={`${basePath}/images/cookies-overview.png`}
+                alt="MyGold Cookies Range"
                 width={560}
                 height={400}
                 className="w-full h-auto object-cover"
@@ -50,8 +51,8 @@ export default function BrandEssence() {
             {/* Floating card - bottom left */}
             <div className="absolute -bottom-8 -left-4 sm:-left-8 rounded-2xl overflow-hidden shadow-xl shadow-brown/10 border-4 border-cream w-44 sm:w-52 h-36 sm:h-40">
               <Image
-                src={`${basePath}/images/tea-jar.png`}
-                alt="MyGold Tea Jar"
+                src={`${basePath}/images/rice-overview.png`}
+                alt="MyGold Kilombero Rice"
                 fill
                 className="object-cover"
               />
@@ -61,9 +62,9 @@ export default function BrandEssence() {
             <div className="absolute -top-4 -right-4 sm:-right-6 rounded-2xl bg-white p-5 shadow-xl shadow-brown/10 border border-cream-dark">
               <div className="space-y-4">
                 {[
-                  { title: "Finest Tea Gardens", icon: "🌿" },
-                  { title: "Supreme Blend", icon: "✨" },
-                  { title: "Most Loved Brand", icon: "🏆" },
+                  { title: "Premium Cookies & Snacks", icon: "🍪" },
+                  { title: "Quality Margarine & Rice", icon: "🌾" },
+                  { title: "Most Trusted Brand", icon: "🏆" },
                 ].map((item) => (
                   <div key={item.title} className="flex items-center gap-3">
                     <span className="text-lg">{item.icon}</span>

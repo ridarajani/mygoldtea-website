@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Products — MyGold Tea",
+  title: "Our Products   MyGold Tea",
   description:
-    "Explore our full range of Malawian tea products — from export quality blends to convenient tea bags, cookies, rice and more.",
+    "Explore our full range of Malawian tea products   from export quality blends to convenient tea bags, cookies, rice and more.",
 };
 
 export default function ProductsLayout({

@@ -1,6 +1,10 @@
+"use client";
+
+import ScrollReveal from "./ScrollReveal";
+
 const milestones = [
   {
-    year: "2003",
+    year: "2008",
     title: "Founded",
     desc: "MyGold brand established in Malawi",
     icon: (
@@ -10,9 +14,9 @@ const milestones = [
     ),
   },
   {
-    year: "2005",
+    year: "2012",
     title: "Expanded",
-    desc: "Expanded product range to cookies, margarine, and rice",
+    desc: "Expanded product range to cookies, margarine, rice, and tea",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -82,50 +86,53 @@ export default function SocialProof() {
     <section className="bg-cream py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Brand Values Header */}
-        <div className="text-center max-w-3xl mx-auto">
-          <span className="text-sm font-semibold uppercase tracking-widest text-green">
-            What We Stand For
-          </span>
-          <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-brown-dark">
-            Our <span className="text-gold-dark italic">Values</span>
-          </h2>
-        </div>
+        <ScrollReveal>
+          <div className="text-center max-w-3xl mx-auto">
+            <span className="text-sm font-semibold uppercase tracking-widest text-green">
+              What We Stand For
+            </span>
+            <h2 className="mt-3 text-4xl sm:text-5xl font-bold text-brown-dark">
+              Our <span className="text-gold-dark italic">Values</span>
+            </h2>
+          </div>
+        </ScrollReveal>
 
         {/* Values Cards */}
         <div className="mt-16 grid sm:grid-cols-3 gap-8">
-          {values.map((val) => (
-            <div
-              key={val.title}
-              className="group relative rounded-3xl bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden border border-cream-dark"
-            >
-              <div
-                className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${val.accent}`}
-              />
-              <div
-                className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${val.accent} text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-500`}
-              >
-                {val.icon}
+          {values.map((val, i) => (
+            <ScrollReveal key={val.title} delay={i * 120}>
+              <div className="group relative rounded-3xl bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden border border-cream-dark hover:-translate-y-1">
+                <div
+                  className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${val.accent}`}
+                />
+                <div
+                  className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${val.accent} text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-500`}
+                >
+                  {val.icon}
+                </div>
+                <h3 className="mt-6 text-xl font-bold text-brown-dark">
+                  {val.title}
+                </h3>
+                <p className="mt-3 text-brown leading-relaxed">
+                  {val.description}
+                </p>
               </div>
-              <h3 className="mt-6 text-xl font-bold text-brown-dark">
-                {val.title}
-              </h3>
-              <p className="mt-3 text-brown leading-relaxed">
-                {val.description}
-              </p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Journey Timeline */}
         <div className="mt-24">
-          <div className="text-center mb-14">
-            <span className="text-sm font-semibold uppercase tracking-widest text-green">
-              Since 2003
-            </span>
-            <h3 className="mt-2 text-3xl sm:text-4xl font-bold text-brown-dark">
-              Our <span className="text-gold-dark italic">Journey</span>
-            </h3>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-14">
+              <span className="text-sm font-semibold uppercase tracking-widest text-green">
+                Since 2008
+              </span>
+              <h3 className="mt-2 text-3xl sm:text-4xl font-bold text-brown-dark">
+                Our <span className="text-gold-dark italic">Journey</span>
+              </h3>
+            </div>
+          </ScrollReveal>
 
           {/* Timeline track */}
           <div className="relative">
@@ -134,35 +141,37 @@ export default function SocialProof() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
               {milestones.map((m, i) => (
-                <div key={m.year} className="group relative flex flex-col items-center text-center">
-                  {/* Icon circle */}
-                  <div className="relative z-10 w-[56px] h-[56px] rounded-full bg-gradient-to-br from-gold to-gold-dark text-white flex items-center justify-center shadow-lg shadow-gold/20 group-hover:scale-110 group-hover:shadow-gold/30 transition-all duration-500">
-                    {m.icon}
+                <ScrollReveal key={m.year} delay={i * 150}>
+                  <div className="group relative flex flex-col items-center text-center">
+                    {/* Icon circle */}
+                    <div className="relative z-10 w-[56px] h-[56px] rounded-full bg-gradient-to-br from-gold to-gold-dark text-white flex items-center justify-center shadow-lg shadow-gold/20 group-hover:scale-110 group-hover:shadow-gold/30 transition-all duration-500">
+                      {m.icon}
+                    </div>
+
+                    {/* Year */}
+                    <div className="mt-5 text-3xl font-bold text-gold-dark font-serif">
+                      {m.year}
+                    </div>
+
+                    {/* Title */}
+                    <h4 className="mt-2 text-lg font-bold text-brown-dark">
+                      {m.title}
+                    </h4>
+
+                    {/* Description */}
+                    <p className="mt-2 text-sm text-brown leading-relaxed max-w-[220px]">
+                      {m.desc}
+                    </p>
+
+                    {/* Step indicator */}
+                    <div className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-beige border border-cream-dark px-3 py-1">
+                      <div className="w-1.5 h-1.5 rounded-full bg-gold" />
+                      <span className="text-[11px] font-semibold text-brown-light uppercase tracking-wider">
+                        Step {String(i + 1).padStart(2, "0")}
+                      </span>
+                    </div>
                   </div>
-
-                  {/* Year */}
-                  <div className="mt-5 text-3xl font-bold text-gold-dark font-serif">
-                    {m.year}
-                  </div>
-
-                  {/* Title */}
-                  <h4 className="mt-2 text-lg font-bold text-brown-dark">
-                    {m.title}
-                  </h4>
-
-                  {/* Description */}
-                  <p className="mt-2 text-sm text-brown leading-relaxed max-w-[220px]">
-                    {m.desc}
-                  </p>
-
-                  {/* Step indicator */}
-                  <div className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-beige border border-cream-dark px-3 py-1">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-                    <span className="text-[11px] font-semibold text-brown-light uppercase tracking-wider">
-                      Step {String(i + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>

@@ -8,16 +8,16 @@ const quickLinks = [
   { label: "About Us", href: "/#brand" },
   { label: "Our Products", href: "/products" },
   { label: "Quality", href: "/#quality" },
-  { label: "Fun Facts", href: "/fun-facts" },
+  { label: "Our Process", href: "/our-process" },
   { label: "Contact Us", href: "/contact" },
 ];
 
 const products = [
-  "MyGold Cookies",
-  "MyGold Margarine",
-  "MyGold Kilombero Rice",
-  "MyGold Peanut Snacks",
-  "MyGold Tea",
+  { label: "MyGold Cookies", href: "/products" },
+  { label: "MyGold Margarine", href: "/products" },
+  { label: "MyGold Kilombero Rice", href: "/products" },
+  { label: "MyGold Peanut Snacks", href: "/products" },
+  { label: "MyGold Tea", href: "/products" },
 ];
 
 export default function Footer() {
@@ -38,12 +38,12 @@ export default function Footer() {
             </Link>
             <p className="mt-4 text-sm text-white/55 leading-relaxed">
               Malawi&apos;s most trusted food brand. Premium cookies, margarine,
-              rice, snacks, and tea — quality you can taste.
+              rice, snacks, and tea   quality you can taste.
             </p>
             {/* Social links */}
             <div className="mt-6 flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/my.goldgroup?mibextid=ZbWKwL"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -54,7 +54,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/mygoldgroup?utm_source=qr&igshid=YzU1NGVlODEzOA=="
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -93,12 +93,12 @@ export default function Footer() {
             </h3>
             <ul className="mt-4 space-y-3">
               {products.map((product) => (
-                <li key={product}>
+                <li key={product.label}>
                   <Link
-                    href="/products"
+                    href={product.href}
                     className="text-sm text-white/55 hover:text-gold-light transition-colors"
                   >
-                    {product}
+                    {product.label}
                   </Link>
                 </li>
               ))}
@@ -186,9 +186,15 @@ export default function Footer() {
           <p className="text-sm text-white/40">
             &copy; {new Date().getFullYear()} My Gold Tea. All Rights Reserved.
           </p>
-          <p className="text-sm text-white/40">
-            Made with love in Malawi, Africa
-          </p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy-policy" className="text-sm text-white/40 hover:text-gold-light transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-white/20">|</span>
+            <Link href="/terms" className="text-sm text-white/40 hover:text-gold-light transition-colors">
+              Terms &amp; Conditions
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

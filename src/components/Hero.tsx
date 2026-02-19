@@ -6,9 +6,9 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden bg-black-rich"
+      className="relative min-h-screen flex items-center overflow-hidden bg-black"
     >
-      {/* Background Image */}
+      {/* Background Image - warm tea/cookies sunrise vibe */}
       <Image
         src={`${basePath}/images/lifestyle.jpg`}
         alt="MyGold Tea"
@@ -17,24 +17,24 @@ export default function Hero() {
         priority
       />
 
-      {/* Dark Black Overlay */}
+      {/* Dark Overlays */}
       <div className="absolute inset-0 bg-black/40" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40" />
 
       {/* Decorative blurs */}
       <div className="absolute top-20 right-1/4 w-[400px] h-[400px] rounded-full bg-gold/10 blur-[120px]" />
-      <div className="absolute bottom-20 left-10 w-[300px] h-[300px] rounded-full bg-teal/10 blur-[100px]" />
+      <div className="absolute bottom-20 left-10 w-[300px] h-[300px] rounded-full bg-green-light/10 blur-[100px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-28 pb-20 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left — Text Content */}
+          {/* Left - Text Content */}
           <div>
             {/* Badge */}
             <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 backdrop-blur-sm px-5 py-2 mb-8">
               <span className="h-2 w-2 rounded-full bg-gold animate-pulse" />
               <span className="text-sm font-medium text-gold-light tracking-wide">
-                Quality Food Products Since 2003
+                Quality Food Products Since 2008
               </span>
             </div>
 
@@ -51,7 +51,7 @@ export default function Hero() {
             {/* Subheadline */}
             <p className="mt-6 max-w-lg text-lg sm:text-xl text-white/60 leading-relaxed">
               From delicious cookies and premium margarine to wholesome rice
-              and irresistible snacks — discover quality food products
+              and irresistible snacks   discover quality food products
               crafted with pride in Malawi.
             </p>
 
@@ -72,13 +72,13 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — Product Showcase */}
+          {/* Right - Product Showcase */}
           <div className="hidden lg:block relative">
             <div className="relative">
               {/* Main product image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/50 border border-white/10">
                 <Image
-                  src={`${basePath}/images/products-overview.png`}
+                  src={`${basePath}/images/herosection-main.png`}
                   alt="MyGold Complete Product Range"
                   width={600}
                   height={400}
@@ -91,8 +91,8 @@ export default function Hero() {
               {/* Floating product card - top right */}
               <div className="absolute -top-6 -right-6 rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10 w-36 h-36">
                 <Image
-                  src={`${basePath}/images/cookies-overview.png`}
-                  alt="MyGold Cookies Range"
+                  src={`${basePath}/images/cookies.jpg`}
+                  alt="MyGold Snacks"
                   fill
                   className="object-cover"
                 />
@@ -101,7 +101,7 @@ export default function Hero() {
               {/* Floating product card - bottom left */}
               <div className="absolute -bottom-6 -left-6 rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10 w-40 h-32">
                 <Image
-                  src={`${basePath}/images/rice-overview.png`}
+                  src={`${basePath}/images/margarine.png`}
                   alt="MyGold Kilombero Rice Range"
                   fill
                   className="object-cover"
@@ -121,9 +121,9 @@ export default function Hero() {
         <div className="mt-20 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-8">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
             {[
-              { value: "20+", label: "Years of Excellence" },
+              { value: "18+", label: "Years of Excellence" },
               { value: "25+", label: "Quality Products" },
-              { value: "4", label: "Product Categories" },
+              { value: "5", label: "Product Categories" },
               { value: "#1", label: "Malawi Food Brand" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">

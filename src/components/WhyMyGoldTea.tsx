@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -31,8 +34,8 @@ const differentiators = [
     ),
   },
   {
-    title: "Tasty Snacks",
-    short: "Delicious peanuts and snacks perfect for any occasion",
+    title: "Fine Tea & Snacks",
+    short: "Premium Malawi tea and delicious peanut snacks for every occasion",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3c-4 6-7 9-7 12a7 7 0 1014 0c0-3-3-6-7-12z" />
@@ -41,7 +44,7 @@ const differentiators = [
   },
   {
     title: "Expert Craft",
-    short: "20+ years of proven quality across all our products",
+    short: "18 years of proven quality across all our products",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
@@ -54,54 +57,56 @@ export default function WhyMyGoldTea() {
   return (
     <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl overflow-hidden">
-          {/* Background image with overlay */}
-          <Image
-            src={`${basePath}/images/hero.jpg`}
-            alt="MyGold Products"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-green-dark/90" />
-          <div className="absolute inset-0 bg-gradient-to-r from-green-dark/95 via-green-dark/85 to-green/70" />
+        <ScrollReveal variant="scale">
+          <div className="relative rounded-3xl overflow-hidden">
+            {/* Background image with overlay */}
+            <Image
+              src={`${basePath}/images/hero.jpg`}
+              alt="MyGold Products"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-green-dark/90" />
+            <div className="absolute inset-0 bg-gradient-to-r from-green-dark/95 via-green-dark/85 to-green/70" />
 
-          {/* Decorative accents */}
-          <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-gold-light/10 blur-[80px]" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-green-light/10 blur-[60px]" />
+            {/* Decorative accents */}
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-gold-light/10 blur-[80px]" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-green-light/10 blur-[60px]" />
 
-          <div className="relative z-10 px-6 py-12 sm:px-10 sm:py-14">
-            {/* Header */}
-            <div className="text-center mb-10">
-              <span className="text-xs font-semibold uppercase tracking-widest text-gold-light">
-                What Makes Us Different
-              </span>
-              <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-white leading-snug">
-                Why Families Choose{" "}
-                <span className="text-gold-light italic">MyGold</span>
-              </h2>
-            </div>
+            <div className="relative z-10 px-6 py-12 sm:px-10 sm:py-14">
+              {/* Header */}
+              <div className="text-center mb-10">
+                <span className="text-xs font-semibold uppercase tracking-widest text-gold-light">
+                  What Makes Us Different
+                </span>
+                <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-white leading-snug">
+                  Why Families Choose{" "}
+                  <span className="text-gold-light italic">MyGold</span>
+                </h2>
+              </div>
 
-            {/* Differentiators grid */}
-            <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-4">
-              {differentiators.map((item) => (
-                <div
-                  key={item.title}
-                  className="group text-center rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-6 hover:bg-white/15 hover:border-gold-light/30 transition-all duration-300"
-                >
-                  <div className="mx-auto w-10 h-10 rounded-xl bg-gold-light/20 text-gold-light flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                    {item.icon}
+              {/* Differentiators grid */}
+              <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                {differentiators.map((item) => (
+                  <div
+                    key={item.title}
+                    className="group text-center rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-6 hover:bg-white/15 hover:border-gold-light/30 transition-all duration-300"
+                  >
+                    <div className="mx-auto w-10 h-10 rounded-xl bg-gold-light/20 text-gold-light flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                      {item.icon}
+                    </div>
+                    <h3 className="text-sm font-semibold text-white mb-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-white/60 leading-relaxed">
+                      {item.short}
+                    </p>
                   </div>
-                  <h3 className="text-sm font-semibold text-white mb-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-white/60 leading-relaxed">
-                    {item.short}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

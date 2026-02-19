@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -14,7 +15,7 @@ const teaProducts = [
     size: "500g",
     category: "Premium",
     description:
-      "Our flagship blend — the finest export quality tea for the true connoisseur. Rich, aromatic, and full-bodied.",
+      "Our flagship blend   the finest export quality tea for the true connoisseur. Rich, aromatic, and full-bodied.",
     image: `${basePath}/images/pure-african-gold-removebg-preview.png`,
     badge: "Flagship",
     tab: "Tea Collection",
@@ -24,7 +25,7 @@ const teaProducts = [
     size: "7g · 10g · 20g · 125g",
     category: "Export",
     description:
-      "A supreme export quality blend with rich aroma and an unforgettable taste — available from single-serve to family size.",
+      "A supreme export quality blend with rich aroma and an unforgettable taste   available from single-serve to family size.",
     image: `${basePath}/images/export-quality-range-removebg-preview.png`,
     badge: "Best Seller",
     tab: "Tea Collection",
@@ -34,7 +35,7 @@ const teaProducts = [
     size: "50g & 125g",
     category: "Value",
     description:
-      "Great quality tea at an affordable price — bringing the taste of gold to every Malawian home.",
+      "Great quality tea at an affordable price   bringing the taste of gold to every Malawian home.",
     image: `${basePath}/images/economy-range-removebg-preview.png`,
     badge: null,
     tab: "Tea Collection",
@@ -44,7 +45,7 @@ const teaProducts = [
     size: "200g",
     category: "Gift",
     description:
-      "Beautifully presented in a reusable glass jar — makes an excellent gift or kitchen centerpiece.",
+      "Beautifully presented in a reusable glass jar   makes an excellent gift or kitchen centerpiece.",
     image: `${basePath}/images/tea-jar-removebg-preview.png`,
     badge: "Gift Pick",
     tab: "Tea Collection",
@@ -54,7 +55,7 @@ const teaProducts = [
     size: "100 PCS",
     category: "Tea Bags",
     description:
-      "Malawi's favourite tea in a generous 100-count box — premium convenience for tea lovers.",
+      "Malawi's favourite tea in a generous 100-count box   premium convenience for tea lovers.",
     image: `${basePath}/images/tea-bags-100-removebg-preview.png`,
     badge: "Popular",
     tab: "Tea Collection",
@@ -64,7 +65,7 @@ const teaProducts = [
     size: "25 PCS",
     category: "Tea Bags",
     description:
-      "Premium tea in a convenient tagless bag format — 25 bags of pure gold for everyday enjoyment.",
+      "Premium tea in a convenient tagless bag format   25 bags of pure gold for everyday enjoyment.",
     image: `${basePath}/images/tea-bags-25-removebg-preview.png`,
     badge: null,
     tab: "Tea Collection",
@@ -74,7 +75,7 @@ const teaProducts = [
     size: "50 PCS",
     category: "Tea Bags",
     description:
-      "A handy 50-bag box perfect for home or office — convenience without compromising on quality.",
+      "A handy 50-bag box perfect for home or office   convenience without compromising on quality.",
     image: `${basePath}/images/tea-bags-50-removebg-preview.png`,
     badge: null,
     tab: "Tea Collection",
@@ -84,42 +85,52 @@ const teaProducts = [
 const cookieProducts = [
   {
     name: "MyGold Short Bread Cookies",
-    size: "150g",
+    size: "100g",
     category: "Cookies & Snacks",
     description:
-      "Classic buttery shortbread cookies — perfectly crumbly and delicious with your afternoon tea.",
+      "Classic buttery shortbread cookies   perfectly crumbly and delicious with your afternoon tea.",
     image: `${basePath}/images/shortbread-cookies-removebg-preview.png`,
     badge: null,
     tab: "Cookies & Snacks",
   },
   {
     name: "MyGold Chocolate Chip Cookies",
-    size: "150g",
+    size: "100g",
     category: "Cookies & Snacks",
     description:
-      "Rich chocolate chip cookies baked to perfection — an irresistible treat for chocolate lovers.",
+      "Rich chocolate chip cookies baked to perfection   an irresistible treat for chocolate lovers.",
     image: `${basePath}/images/chocolate-chip-cookies-removebg-preview.png`,
     badge: null,
     tab: "Cookies & Snacks",
   },
   {
     name: "MyGold Coconut Cookies",
-    size: "150g",
+    size: "100g",
     category: "Cookies & Snacks",
     description:
-      "Tropical coconut-infused cookies with a delightful crunch — a taste of paradise in every bite.",
+      "Tropical coconut-infused cookies with a delightful crunch   a taste of paradise in every bite.",
     image: `${basePath}/images/coconut-cookies-removebg-preview.png`,
     badge: null,
     tab: "Cookies & Snacks",
   },
   {
     name: "MyGold Peanut Cookies",
-    size: "150g",
+    size: "100g",
     category: "Cookies & Snacks",
     description:
-      "Savoury peanut cookies packed with flavour — the perfect companion to your cup of MyGold Tea.",
+      "Savoury peanut cookies packed with flavour   the perfect companion to your cup of MyGold Tea.",
     image: `${basePath}/images/peanut-cookies-removebg-preview.png`,
     badge: null,
+    tab: "Cookies & Snacks",
+  },
+  {
+    name: "Zeera Cumin Biscuit",
+    size: "100g",
+    category: "Cookies & Snacks",
+    description:
+      "A unique cumin-flavoured biscuit with a savoury twist   crispy, aromatic, and perfect with tea.",
+    image: `${basePath}/images/zeera-removebg-preview.png`,
+    badge: "New",
     tab: "Cookies & Snacks",
   },
   {
@@ -127,7 +138,7 @@ const cookieProducts = [
     size: "500g",
     category: "Cookies & Snacks",
     description:
-      "A generous bag of crispy, crunchy cookies — great for sharing with family and friends.",
+      "A generous bag of crispy, crunchy cookies   great for sharing with family and friends.",
     image: `${basePath}/images/cookies-bag-removebg-preview.png`,
     badge: null,
     tab: "Cookies & Snacks",
@@ -137,7 +148,7 @@ const cookieProducts = [
     size: "60 PCS & 145 PCS",
     category: "Cookies & Snacks",
     description:
-      "Crispy and crunchy cookies in a premium reusable jar — always fresh and ready to enjoy.",
+      "Crispy and crunchy cookies in a premium reusable jar   always fresh and ready to enjoy.",
     image: `${basePath}/images/cookies-jar-removebg-preview.png`,
     badge: null,
     tab: "Cookies & Snacks",
@@ -150,7 +161,7 @@ const otherProducts = [
     size: "25g & 100g",
     category: "Rice & Essentials",
     description:
-      "Smooth, creamy margarine that spreads perfectly — ideal for bread, toast, and baking.",
+      "Smooth, creamy margarine that spreads perfectly   ideal for bread, toast, and baking.",
     image: `${basePath}/images/margarine-removebg-preview.png`,
     badge: null,
     tab: "Rice & Essentials",
@@ -160,7 +171,7 @@ const otherProducts = [
     size: "5kg",
     category: "Rice & Essentials",
     description:
-      "Premium Kilombero rice in a family-size pack — perfectly fluffy for every meal.",
+      "Premium Kilombero rice in a family-size pack   perfectly fluffy for every meal.",
     image: `${basePath}/images/rice-5kg-removebg-preview.png`,
     badge: null,
     tab: "Rice & Essentials",
@@ -170,7 +181,7 @@ const otherProducts = [
     size: "500g & 2kg",
     category: "Rice & Essentials",
     description:
-      "Premium quality Kilombero rice — perfectly portioned for everyday cooking.",
+      "Premium quality Kilombero rice   perfectly portioned for everyday cooking.",
     image: `${basePath}/images/rice-range-removebg-preview.png`,
     badge: null,
     tab: "Rice & Essentials",
@@ -267,7 +278,7 @@ export default function ProductsPage() {
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-white/70">
             Discover our range of premium cookies, quality margarine, wholesome
-            rice, delicious snacks, and fine tea — all crafted in Malawi.
+            rice, delicious snacks, and fine tea   all crafted in Malawi.
           </p>
         </div>
       </section>
@@ -324,8 +335,8 @@ export default function ProductsPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProducts.map((product, index) => (
+              <ScrollReveal key={`${product.name}-${product.size}-${index}`} delay={index % 3 * 100}>
               <div
-                key={`${product.name}-${product.size}-${index}`}
                 className="group rounded-3xl bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-cream-dark hover:border-gold/20 hover:-translate-y-1"
               >
                 <div className="relative h-56 overflow-hidden bg-gradient-to-br from-cream to-beige">
@@ -361,6 +372,7 @@ export default function ProductsPage() {
                 {/* Bottom accent */}
                 <div className="h-0.5 bg-gradient-to-r from-gold via-gold-light to-green scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

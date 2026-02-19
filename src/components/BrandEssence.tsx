@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -7,8 +10,8 @@ export default function BrandEssence() {
     <section id="brand" className="bg-cream py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left — Text */}
-          <div>
+          {/* Left   Text */}
+          <ScrollReveal variant="left">
             <span className="text-sm font-semibold uppercase tracking-widest text-gold-dark">
               Our Story
             </span>
@@ -19,66 +22,71 @@ export default function BrandEssence() {
             </h2>
             <p className="mt-6 text-lg text-brown leading-relaxed">
               MyGold is Malawi&apos;s most trusted food brand, offering a wide
-              range of quality products — from delicious cookies and premium
-              margarine to wholesome Kilombero rice and tasty snacks. Every
-              product is crafted with care using the finest local ingredients.
+              range of quality products   from delicious cookies and premium
+              margarine to wholesome Kilombero rice, fine tea, and tasty
+              snacks. Every product is crafted with care using the finest
+              local ingredients.
             </p>
             <p className="mt-4 text-lg text-brown leading-relaxed">
               Whether it&apos;s our crunchy shortbread cookies, smooth
-              margarine, or aromatic rice, each MyGold product delivers the
-              quality and taste that families across Malawi love and trust.
+              margarine, aromatic rice, or a refreshing cup of MyGold tea,
+              each product delivers the quality and taste that families
+              across Malawi love and trust.
             </p>
             <p className="mt-4 text-brown-light">
               It is the endeavor of our highly qualified staff who work very hard
               to bring you the finest food products for Malawian families and
               food lovers around the world.
             </p>
-          </div>
+          </ScrollReveal>
 
-          {/* Right — Image Collage */}
-          <div className="relative">
-            {/* Main image */}
-            <div className="rounded-3xl overflow-hidden shadow-xl shadow-brown/10">
-              <Image
-                src={`${basePath}/images/cookies-overview.png`}
-                alt="MyGold Cookies Range"
-                width={560}
-                height={400}
-                className="w-full h-auto object-cover"
-              />
-            </div>
-
-            {/* Floating card - bottom left */}
-            <div className="absolute -bottom-8 -left-4 sm:-left-8 rounded-2xl overflow-hidden shadow-xl shadow-brown/10 border-4 border-cream w-44 sm:w-52 h-36 sm:h-40">
-              <Image
-                src={`${basePath}/images/rice-overview.png`}
-                alt="MyGold Kilombero Rice"
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Info card - top right */}
-            <div className="absolute -top-4 -right-4 sm:-right-6 rounded-2xl bg-white p-5 shadow-xl shadow-brown/10 border border-cream-dark">
-              <div className="space-y-4">
-                {[
-                  { title: "Premium Cookies & Snacks", icon: "🍪" },
-                  { title: "Quality Margarine & Rice", icon: "🌾" },
-                  { title: "Most Trusted Brand", icon: "🏆" },
-                ].map((item) => (
-                  <div key={item.title} className="flex items-center gap-3">
-                    <span className="text-lg">{item.icon}</span>
-                    <span className="text-sm font-medium text-brown-dark">
-                      {item.title}
-                    </span>
-                  </div>
-                ))}
+          {/* Right   Image Collage */}
+          <ScrollReveal variant="right">
+            <div className="relative">
+              {/* Main image */}
+              <div className="rounded-3xl overflow-hidden shadow-xl shadow-brown/10">
+                <Image
+                  src={`${basePath}/images/cookies-overview.png`}
+                  alt="MyGold Cookies Range"
+                  width={560}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
               </div>
-            </div>
 
-            {/* Decorative border */}
-            <div className="absolute -bottom-3 -right-3 w-full h-full rounded-3xl border-2 border-gold/20 -z-10" />
-          </div>
+              {/* Floating card - bottom left */}
+              <div className="absolute -bottom-8 -left-4 sm:-left-8 rounded-2xl overflow-hidden shadow-xl shadow-brown/10 border-4 border-cream w-44 sm:w-52 h-36 sm:h-40">
+                <Image
+                  src={`${basePath}/images/rice-overview.png`}
+                  alt="MyGold Kilombero Rice"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Info card - top right */}
+              <div className="absolute -top-4 -right-4 sm:-right-6 rounded-2xl bg-white p-5 shadow-xl shadow-brown/10 border border-cream-dark">
+                <div className="space-y-4">
+                  {[
+                    { title: "Premium Cookies & Snacks", icon: "🍪" },
+                    { title: "Quality Margarine & Rice", icon: "🌾" },
+                    { title: "Fine Tea & Beverages", icon: "🍵" },
+                    { title: "Most Trusted Brand", icon: "🏆" },
+                  ].map((item) => (
+                    <div key={item.title} className="flex items-center gap-3">
+                      <span className="text-lg">{item.icon}</span>
+                      <span className="text-sm font-medium text-brown-dark">
+                        {item.title}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Decorative border */}
+              <div className="absolute -bottom-3 -right-3 w-full h-full rounded-3xl border-2 border-gold/20 -z-10" />
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

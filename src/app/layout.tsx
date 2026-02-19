@@ -15,12 +15,13 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "MyGold — Premium Cookies, Margarine, Rice & Snacks from Malawi",
+  title: "MyGold   Premium Cookies, Tea, Margarine, Rice & Snacks from Malawi",
   description:
-    "Discover MyGold's range of premium cookies, quality margarine, wholesome Kilombero rice, and delicious snacks. Malawi's most trusted food brand since 2003.",
+    "Discover MyGold's range of premium cookies, fine tea, quality margarine, wholesome Kilombero rice, and delicious snacks. Malawi's most trusted food brand since 2008.",
   keywords: [
     "MyGold",
     "MyGold cookies",
+    "MyGold tea",
     "Malawi margarine",
     "Kilombero rice",
     "African snacks",

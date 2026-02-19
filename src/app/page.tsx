@@ -5,7 +5,6 @@ import WhyMyGoldTea from "@/components/WhyMyGoldTea";
 import ProductHighlights from "@/components/ProductHighlights";
 import CraftQuality from "@/components/CraftQuality";
 import LifestyleExperience from "@/components/LifestyleExperience";
-import FunFacts from "@/components/FunFacts";
 import SocialProof from "@/components/SocialProof";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
@@ -20,7 +19,6 @@ export default function Home() {
       <ProductHighlights />
       <CraftQuality />
       <LifestyleExperience />
-      <FunFacts />
       <SocialProof />
       <CallToAction />
       <Footer />

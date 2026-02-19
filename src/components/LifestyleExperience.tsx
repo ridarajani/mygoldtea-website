@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -7,60 +10,62 @@ export default function LifestyleExperience() {
     <section className="bg-beige py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left — lifestyle visual collage */}
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="rounded-2xl overflow-hidden h-48 shadow-md shadow-brown/10">
-                  <Image
-                    src={`${basePath}/images/margarine.png`}
-                    alt="MyGold Margarine"
-                    width={300}
-                    height={200}
-                    className="w-full h-full object-cover"
-                  />
+          {/* Left   lifestyle visual collage */}
+          <ScrollReveal variant="left">
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <div className="rounded-2xl overflow-hidden h-48 shadow-md shadow-brown/10">
+                    <Image
+                      src={`${basePath}/images/margarine.png`}
+                      alt="MyGold Margarine"
+                      width={300}
+                      height={200}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="rounded-2xl overflow-hidden h-64 shadow-md shadow-brown/10">
+                    <Image
+                      src={`${basePath}/images/peanuts.jpg`}
+                      alt="MyGold Snacks"
+                      width={300}
+                      height={260}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-                <div className="rounded-2xl overflow-hidden h-64 shadow-md shadow-brown/10">
-                  <Image
-                    src={`${basePath}/images/peanuts.jpg`}
-                    alt="MyGold Snacks"
-                    width={300}
-                    height={260}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="space-y-4 pt-8">
-                <div className="rounded-2xl overflow-hidden h-64 shadow-md shadow-brown/10">
-                  <Image
-                    src={`${basePath}/images/cookies-overview.png`}
-                    alt="MyGold Cookies range"
-                    width={300}
-                    height={260}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="rounded-2xl overflow-hidden h-48 shadow-md shadow-brown/10 relative">
-                  <Image
-                    src={`${basePath}/images/rice-overview.png`}
-                    alt="MyGold Kilombero Rice"
-                    width={300}
-                    height={200}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-green-dark/50 to-transparent" />
-                  <div className="absolute bottom-4 left-4">
-                    <span className="text-sm font-semibold text-white tracking-wider uppercase">
-                      Quality You Can Taste
-                    </span>
+                <div className="space-y-4 pt-8">
+                  <div className="rounded-2xl overflow-hidden h-64 shadow-md shadow-brown/10">
+                    <Image
+                      src={`${basePath}/images/cookies-overview.png`}
+                      alt="MyGold Cookies range"
+                      width={300}
+                      height={260}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="rounded-2xl overflow-hidden h-48 shadow-md shadow-brown/10 relative">
+                    <Image
+                      src={`${basePath}/images/rice-overview.png`}
+                      alt="MyGold Kilombero Rice"
+                      width={300}
+                      height={200}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-green-dark/50 to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <span className="text-sm font-semibold text-white tracking-wider uppercase">
+                        Quality You Can Taste
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          {/* Right — content */}
-          <div>
+          {/* Right   content */}
+          <ScrollReveal variant="right">
             <span className="text-sm font-semibold uppercase tracking-widest text-green">
               The Experience
             </span>
@@ -70,24 +75,24 @@ export default function LifestyleExperience() {
               <span className="text-gold-dark italic">A Lifestyle.</span>
             </h2>
             <p className="mt-6 text-lg text-brown leading-relaxed">
-              From crunchy cookies to fluffy rice, smooth margarine to tasty
-              snacks — every MyGold product is crafted to bring joy to your
-              table and quality to every meal.
+              From crunchy cookies and fine tea to fluffy rice, smooth
+              margarine, and tasty snacks   every MyGold product is crafted
+              to bring joy to your table and quality to every meal.
             </p>
 
             <div className="mt-8 space-y-6">
               {[
                 {
                   title: "Delicious Cookies",
-                  desc: "Baked with the finest ingredients — shortbread, chocolate chip, coconut, and peanut varieties.",
+                  desc: "Baked with the finest ingredients   shortbread, chocolate chip, coconut, and peanut varieties.",
                 },
                 {
-                  title: "Premium Margarine & Rice",
-                  desc: "Smooth margarine for every recipe and aromatic Kilombero rice for the perfect meal.",
+                  title: "Fine Tea & Essentials",
+                  desc: "Premium Malawi tea, smooth margarine, and aromatic Kilombero rice for every occasion.",
                 },
                 {
                   title: "Trusted Quality",
-                  desc: "Over 20 years of delivering products that Malawian families love and trust.",
+                  desc: "18 years of delivering products that Malawian families love and trust.",
                 },
               ].map((item) => (
                 <div key={item.title} className="flex gap-4">
@@ -105,7 +110,7 @@ export default function LifestyleExperience() {
                 </div>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

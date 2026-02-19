@@ -29,7 +29,7 @@ export default function ContactPage() {
     <>
       <Navbar />
 
-      {/* Hero Banner — matches Products page style */}
+      {/* Hero Banner   matches Products page style */}
       <section className="relative bg-gradient-to-br from-green-dark to-green pt-32 pb-20 overflow-hidden">
         <div className="absolute top-20 left-20 w-72 h-72 rounded-full bg-gold-light/10 blur-3xl" />
         <div className="absolute bottom-0 right-10 w-64 h-64 rounded-full bg-green-light/10 blur-3xl" />
@@ -67,7 +67,7 @@ export default function ContactPage() {
       <section className="bg-cream py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12">
-            {/* Contact Info — 2 cols */}
+            {/* Contact Info   2 cols */}
             <div className="lg:col-span-2 space-y-8">
               <div>
                 <h2 className="text-2xl font-bold text-brown-dark">
@@ -176,7 +176,7 @@ export default function ContactPage() {
                 </h3>
                 <div className="flex gap-3">
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/my.goldgroup?mibextid=ZbWKwL"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
@@ -191,7 +191,7 @@ export default function ContactPage() {
                     </svg>
                   </a>
                   <a
-                    href="https://instagram.com"
+                    href="https://instagram.com/mygoldgroup?utm_source=qr&igshid=YzU1NGVlODEzOA=="
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
@@ -239,7 +239,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Contact Form — 3 cols */}
+            {/* Contact Form   3 cols */}
             <div className="lg:col-span-3">
               <div className="rounded-2xl bg-white border border-cream-dark p-8 sm:p-10">
                 <h2 className="text-2xl font-bold text-brown-dark">

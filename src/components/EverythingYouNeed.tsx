@@ -30,7 +30,7 @@ const floatingProducts = [
   {
     image: `${basePath}/images/tea-jar-removebg-preview.png`,
     alt: "Tea Jar",
-    size: 1000,
+    size: 500,
     top: "35%",
     left: "72%",
     speed: -0.13,
@@ -40,7 +40,7 @@ const floatingProducts = [
   {
     image: `${basePath}/images/cookies-jar-removebg-preview.png`,
     alt: "Cookies Jar",
-    size: 500,
+    size: 300,
     top: "76%",
     left: "38%",
     speed: -0.14,

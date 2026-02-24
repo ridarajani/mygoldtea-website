@@ -5,104 +5,133 @@ import { useEffect, useRef, useState } from "react";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const floatingProducts = [
-  // Top center (12 o'clock)
+  // 12 o'clock — top center-right
   {
     image: `${basePath}/images/pure-african-gold-removebg-preview.png`,
     alt: "Pure African Gold Tea",
     size: 400,
+    mobileSize: 160,
     top: "1%",
     left: "45%",
+    mobileTop: "1%",
+    mobileLeft: "38%",
     speed: -0.15,
     delay: 0,
   },
-  // Top right (1-2 o'clock)
+  // 1 o'clock — top right
   {
     image: `${basePath}/images/shortbread-cookies-removebg-preview.png`,
     alt: "Shortbread Cookies",
     size: 300,
+    mobileSize: 120,
     top: "6%",
     left: "72%",
+    mobileTop: "10%",
+    mobileLeft: "72%",
     speed: 0.16,
     delay: 0,
   },
-  // Right (3 o'clock)
+  // 3 o'clock — right
   {
     image: `${basePath}/images/tea-jar-removebg-preview.png`,
     alt: "Tea Jar",
     size: 500,
+    mobileSize: 180,
     top: "35%",
     left: "72%",
+    mobileTop: "36%",
+    mobileLeft: "68%",
     speed: -0.13,
     delay: 200,
   },
-  // Bottom right (4-5 o'clock)
+  // 5 o'clock — bottom right
   {
     image: `${basePath}/images/cookies-jar-removebg-preview.png`,
     alt: "Cookies Jar",
     size: 300,
+    mobileSize: 120,
     top: "76%",
     left: "38%",
+    mobileTop: "62%",
+    mobileLeft: "68%",
     speed: -0.14,
     delay: 0,
   },
-  // Bottom center (6 o'clock)
+  // 6 o'clock — bottom center-right
   {
     image: `${basePath}/images/export-quality-range-removebg-preview.png`,
     alt: "Export Quality Tea",
     size: 400,
+    mobileSize: 150,
     top: "68%",
     left: "72%",
+    mobileTop: "80%",
+    mobileLeft: "55%",
     speed: 0.11,
     delay: 0,
   },
-
-  // Bottom left (7-8 o'clock)
+  // 7 o'clock — bottom left
   {
     image: `${basePath}/images/margarine-removebg-preview.png`,
     alt: "MyGold Margarine",
     size: 300,
+    mobileSize: 120,
     top: "68%",
     left: "5%",
+    mobileTop: "80%",
+    mobileLeft: "5%",
     speed: 0.12,
     delay: 0,
   },
-  // Left (9 o'clock)
+  // 9 o'clock — left
   {
     image: `${basePath}/images/rice-5kg-removebg-preview.png`,
     alt: "Kilombero Rice",
     size: 320,
+    mobileSize: 130,
     top: "33%",
     left: "20%",
+    mobileTop: "36%",
+    mobileLeft: "0%",
     speed: -0.17,
     delay: 0,
   },
-  // Top left (10-11 o'clock)
+  // 10 o'clock — top left
   {
     image: `${basePath}/images/chocolate-chip-cookies-removebg-preview.png`,
     alt: "Chocolate Chip Cookies",
     size: 400,
+    mobileSize: 150,
     top: "18%",
     left: "1%",
+    mobileTop: "14%",
+    mobileLeft: "0%",
     speed: 0.20,
     delay: 0,
   },
-  // Between top-left and top (11 o'clock)
+  // 11 o'clock — top left-center
   {
     image: `${basePath}/images/peanut-cookies-removebg-preview.png`,
     alt: "Peanut Cookies",
     size: 250,
+    mobileSize: 100,
     top: "0%",
     left: "22%",
+    mobileTop: "2%",
+    mobileLeft: "5%",
     speed: 0.14,
     delay: 0,
   },
-  // Between bottom-right and bottom (5 o'clock)
+  // 8 o'clock — bottom center-left
   {
     image: `${basePath}/images/economy-range-removebg-preview.png`,
     alt: "Economy Tea Range",
     size: 170,
+    mobileSize: 80,
     top: "75%",
     left: "58%",
+    mobileTop: "65%",
+    mobileLeft: "2%",
     speed: -0.1,
     delay: 0,
   },
@@ -112,8 +141,13 @@ export default function EverythingYouNeed() {
   const sectionRef = useRef<HTMLElement>(null);
   const [offset, setOffset] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
     const section = sectionRef.current;
     if (!section) return;
 
@@ -141,13 +175,14 @@ export default function EverythingYouNeed() {
     return () => {
       observer.disconnect();
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", checkMobile);
     };
   }, []);
 
   return (
     <section
       ref={sectionRef}
-      className="relative bg-cream min-h-screen flex items-center overflow-visible"
+      className="relative bg-cream min-h-screen flex items-center overflow-hidden md:overflow-visible"
     >
       {/* Floating product images */}
       {floatingProducts.map((product) => (
@@ -155,8 +190,8 @@ export default function EverythingYouNeed() {
           key={product.alt}
           className="absolute transition-all duration-700 ease-out pointer-events-none"
           style={{
-            top: product.top,
-            left: product.left,
+            top: isMobile ? product.mobileTop : product.top,
+            left: isMobile ? product.mobileLeft : product.left,
             transform: `translateY(${offset * product.speed}px)`,
             opacity: isVisible ? 1 : 0,
             transitionDelay: `${product.delay}ms`,
@@ -166,10 +201,12 @@ export default function EverythingYouNeed() {
           <img
             src={product.image}
             alt=""
-            width={product.size}
-            height={product.size}
+            width={isMobile ? product.mobileSize : product.size}
+            height={isMobile ? product.mobileSize : product.size}
             style={{
-              width: `clamp(${Math.round(product.size * 0.2)}px, ${(product.size / 14.4).toFixed(1)}vw, ${product.size}px)`,
+              width: isMobile
+                ? `${product.mobileSize}px`
+                : `clamp(${Math.round(product.size * 0.2)}px, ${(product.size / 14.4).toFixed(1)}vw, ${product.size}px)`,
               height: "auto",
             }}
             aria-hidden="true"

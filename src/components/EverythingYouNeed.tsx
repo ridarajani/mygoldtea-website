@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -56,7 +55,7 @@ const floatingProducts = [
     speed: 0.11,
     delay: 0,
   },
-  
+
   // Bottom left (7-8 o'clock)
   {
     image: `${basePath}/images/margarine-removebg-preview.png`,
@@ -118,7 +117,6 @@ export default function EverythingYouNeed() {
     const section = sectionRef.current;
     if (!section) return;
 
-    // Intersection observer for entrance animation
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -130,7 +128,6 @@ export default function EverythingYouNeed() {
     );
     observer.observe(section);
 
-    // Scroll handler for parallax
     const handleScroll = () => {
       const rect = section.getBoundingClientRect();
       const sectionCenter = rect.top + rect.height / 2;
@@ -153,25 +150,28 @@ export default function EverythingYouNeed() {
       className="relative bg-cream min-h-screen flex items-center overflow-visible"
     >
       {/* Floating product images */}
-      {floatingProducts.map((product, i) => (
+      {floatingProducts.map((product) => (
         <div
           key={product.alt}
           className="absolute transition-all duration-700 ease-out pointer-events-none"
           style={{
             top: product.top,
-            left: "left" in product ? product.left : undefined,
+            left: product.left,
             transform: `translateY(${offset * product.speed}px)`,
             opacity: isVisible ? 1 : 0,
             transitionDelay: `${product.delay}ms`,
           }}
         >
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src={product.image}
             alt=""
             width={product.size}
             height={product.size}
-            className="h-auto"
-            style={{ width: `${product.size}px` }}
+            style={{
+              width: `clamp(${Math.round(product.size * 0.2)}px, ${(product.size / 14.4).toFixed(1)}vw, ${product.size}px)`,
+              height: "auto",
+            }}
             aria-hidden="true"
           />
         </div>

@@ -170,8 +170,8 @@ export default function EverythingYouNeed() {
             alt=""
             width={product.size}
             height={product.size}
-            className="w-auto h-auto"
-            style={{ maxWidth: `${product.size}px` }}
+            className="h-auto"
+            style={{ width: `${product.size}px` }}
             aria-hidden="true"
           />
         </div>

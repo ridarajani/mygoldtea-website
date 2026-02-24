@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -236,8 +236,191 @@ const tabSubtitles: Record<string, string> = {
   "Tea Collection": "Premium teas from the finest gardens in Malawi",
 };
 
+const gridFloatingProducts = [
+  // Left side
+  {
+    image: `${basePath}/images/pure-african-gold-removebg-preview.png`,
+    alt: "Pure African Gold Tea",
+    size: 300,
+    top: "2%",
+    left: "-3%",
+    speed: -0.15,
+  },
+  {
+    image: `${basePath}/images/rice-5kg-removebg-preview.png`,
+    alt: "Kilombero Rice",
+    size: 250,
+    top: "10%",
+    left: "0%",
+    speed: 0.13,
+  },
+  {
+    image: `${basePath}/images/economy-125g-removebg-preview.png`,
+    alt: "Economy 125g",
+    size: 200,
+    top: "28%",
+    left: "-2%",
+    speed: -0.17,
+  },
+  {
+    image: `${basePath}/images/cookies-jar-removebg-preview.png`,
+    alt: "Cookies Jar",
+    size: 280,
+    top: "40%",
+    left: "0%",
+    speed: 0.14,
+  },
+  {
+    image: `${basePath}/images/peanut-cookies-removebg-preview.png`,
+    alt: "Peanut Cookies",
+    size: 200,
+    top: "52%",
+    left: "-3%",
+    speed: -0.12,
+  },
+  {
+    image: `${basePath}/images/cookies-bag-removebg-preview.png`,
+    alt: "Cookies Bag",
+    size: 210,
+    top: "64%",
+    left: "0%",
+    speed: 0.15,
+  },
+  {
+    image: `${basePath}/images/tea-bags-100-removebg-preview.png`,
+    alt: "Tea Bags 100",
+    size: 190,
+    top: "76%",
+    left: "-2%",
+    speed: -0.14,
+  },
+  {
+    image: `${basePath}/images/margarine-removebg-preview.png`,
+    alt: "MyGold Margarine",
+    size: 200,
+    top: "88%",
+    left: "0%",
+    speed: 0.11,
+  },
+  {
+    image: `${basePath}/images/rice-range-removebg-preview.png`,
+    alt: "Rice Range",
+    size: 240,
+    top: "95%",
+    left: "-3%",
+    speed: -0.13,
+  },
+  // Right side
+  {
+    image: `${basePath}/images/shortbread-cookies-removebg-preview.png`,
+    alt: "Shortbread Cookies",
+    size: 220,
+    top: "3%",
+    left: "85%",
+    speed: 0.12,
+  },
+  {
+    image: `${basePath}/images/tea-jar-removebg-preview.png`,
+    alt: "Tea Jar",
+    size: 350,
+    top: "16%",
+    left: "88%",
+    speed: -0.1,
+  },
+  {
+    image: `${basePath}/images/coconut-cookies-removebg-preview.png`,
+    alt: "Coconut Cookies",
+    size: 230,
+    top: "30%",
+    left: "86%",
+    speed: 0.16,
+  },
+  {
+    image: `${basePath}/images/chocolate-chip-cookies-removebg-preview.png`,
+    alt: "Chocolate Chip Cookies",
+    size: 240,
+    top: "44%",
+    left: "85%",
+    speed: -0.13,
+  },
+  {
+    image: `${basePath}/images/tea-bags-50-removebg-preview.png`,
+    alt: "Tea Bags 50",
+    size: 180,
+    top: "56%",
+    left: "88%",
+    speed: 0.15,
+  },
+  {
+    image: `${basePath}/images/economy-range-removebg-preview.png`,
+    alt: "Economy Tea Range",
+    size: 180,
+    top: "66%",
+    left: "86%",
+    speed: -0.11,
+  },
+  {
+    image: `${basePath}/images/zeera-removebg-preview.png`,
+    alt: "Zeera Cumin Biscuit",
+    size: 170,
+    top: "76%",
+    left: "87%",
+    speed: 0.14,
+  },
+  {
+    image: `${basePath}/images/tea-bags-25-removebg-preview.png`,
+    alt: "Tea Bags 25",
+    size: 160,
+    top: "80%",
+    left: "75%",
+    speed: -0.16,
+  },
+  {
+    image: `${basePath}/images/export-quality-range-removebg-preview.png`,
+    alt: "Export Quality Range",
+    size: 220,
+    top: "94%",
+    left: "88%",
+    speed: 0.12,
+  },
+];
+
 export default function ProductsPage() {
   const [activeTab, setActiveTab] = useState("All Products");
+  const gridRef = useRef<HTMLElement>(null);
+  const [gridOffset, setGridOffset] = useState(0);
+  const [gridVisible, setGridVisible] = useState(false);
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setGridVisible(true);
+          observer.unobserve(grid);
+        }
+      },
+      { threshold: 0.05 },
+    );
+    observer.observe(grid);
+
+    const handleScroll = () => {
+      const rect = grid.getBoundingClientRect();
+      const sectionCenter = rect.top + rect.height / 2;
+      const viewportCenter = window.innerHeight / 2;
+      setGridOffset(sectionCenter - viewportCenter);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const filteredProducts =
     activeTab === "All Products"
@@ -318,8 +501,32 @@ export default function ProductsPage() {
       </section>
 
       {/* Products Grid */}
-      <section className="bg-cream py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section ref={gridRef} className="relative bg-cream py-16 overflow-visible">
+        {/* Floating product images in background */}
+        {gridFloatingProducts.map((product) => (
+          <div
+            key={product.alt}
+            className="absolute hidden md:block pointer-events-none transition-all duration-700 ease-out"
+            style={{
+              top: product.top,
+              left: product.left,
+              transform: `translateY(${gridOffset * product.speed}px)`,
+              opacity: gridVisible ? 0.15 : 0,
+            }}
+          >
+            <Image
+              src={product.image}
+              alt=""
+              width={product.size}
+              height={product.size}
+              className="w-auto h-auto"
+              style={{ maxWidth: `${product.size}px` }}
+              aria-hidden="true"
+            />
+          </div>
+        ))}
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-10">
             <div>
               <h2 className="text-3xl font-bold text-brown-dark">

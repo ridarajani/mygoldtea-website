@@ -253,6 +253,7 @@ export default function ProductsPage() {
         <div className="absolute bottom-0 left-10 w-96 h-96 rounded-full bg-green-light/10 blur-3xl" />
         <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-gold-light/10 blur-3xl" />
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-gold/5 blur-[100px]" />
+
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <Link
             href="/"

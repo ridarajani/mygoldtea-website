@@ -13,6 +13,8 @@ export default function ContactPage() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -20,9 +22,29 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -373,12 +395,20 @@ export default function ContactPage() {
                       />
                     </div>
 
+                    {/* Error message */}
+                    {error && (
+                      <div className="rounded-xl bg-red-50 border border-red-200 p-4 text-sm text-red-600">
+                        {error}
+                      </div>
+                    )}
+
                     {/* Submit */}
                     <button
                       type="submit"
-                      className="w-full sm:w-auto rounded-full bg-gold px-10 py-3.5 text-base font-semibold text-white hover:bg-gold-dark transition-colors shadow-lg shadow-gold/20 hover:shadow-xl hover:shadow-gold/30"
+                      disabled={loading}
+                      className="w-full sm:w-auto rounded-full bg-gold px-10 py-3.5 text-base font-semibold text-white hover:bg-gold-dark transition-colors shadow-lg shadow-gold/20 hover:shadow-xl hover:shadow-gold/30 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Send Message
+                      {loading ? "Sending..." : "Send Message"}
                     </button>
                   </form>
                 )}

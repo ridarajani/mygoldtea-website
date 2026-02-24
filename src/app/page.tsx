@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import BrandEssence from "@/components/BrandEssence";
 import WhyMyGoldTea from "@/components/WhyMyGoldTea";
+import EverythingYouNeed from "@/components/EverythingYouNeed";
 import ProductHighlights from "@/components/ProductHighlights";
 import CraftQuality from "@/components/CraftQuality";
 import LifestyleExperience from "@/components/LifestyleExperience";
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <BrandEssence />
       <WhyMyGoldTea />
+      <EverythingYouNeed />
       <ProductHighlights />
       <CraftQuality />
       <LifestyleExperience />

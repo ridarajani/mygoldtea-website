@@ -9,7 +9,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const featuredProducts = [
   {
     name: "MyGold Shortbread Cookies",
-    size: "100g   500g",
+    size: "100g",
     category: "Cookies",
     description:
       "Crispy, buttery shortbread cookies baked to perfection   a family favorite for every occasion.",
@@ -18,11 +18,47 @@ const featuredProducts = [
   },
   {
     name: "MyGold Chocolate Chip Cookies",
-    size: "100g   500g",
+    size: "100g",
     category: "Cookies",
     description:
       "Rich chocolate chips in every bite   the perfect treat for chocolate lovers.",
     image: `${basePath}/images/chocolate-chip-cookies-removebg-preview.png`,
+    badge: "Popular",
+  },
+  {
+    name: "MyGold Coconut Cookies",
+    size: "100g",
+    category: "Cookies",
+    description:
+      "Delightful coconut-flavored cookies with a tropical twist   crunchy and irresistible.",
+    image: `${basePath}/images/coconut-cookies-removebg-preview.png`,
+    badge: null,
+  },
+  {
+    name: "MyGold Peanut Cookies",
+    size: "100g",
+    category: "Cookies",
+    description:
+      "Savoury peanut cookies packed with flavour   the perfect companion to your cup of MyGold Tea.",
+    image: `${basePath}/images/peanut-cookies-removebg-preview.png`,
+    badge: null,
+  },
+  {
+    name: "Zeera Cumin Biscuit",
+    size: "100g",
+    category: "Cookies",
+    description:
+      "A unique cumin-flavoured biscuit with a savoury twist   crispy, aromatic, and perfect with tea.",
+    image: `${basePath}/images/zeera-removebg-preview.png`,
+    badge: "New",
+  },
+  {
+    name: "MyGold Export Quality Tea",
+    size: "7g   125g",
+    category: "Tea",
+    description:
+      "A supreme export quality blend with rich aroma and an unforgettable taste   Malawi's finest tea.",
+    image: `${basePath}/images/export-quality-range-removebg-preview.png`,
     badge: "Popular",
   },
   {
@@ -44,22 +80,13 @@ const featuredProducts = [
     badge: "Premium",
   },
   {
-    name: "MyGold Coconut Cookies",
-    size: "100g   500g",
+    name: "MyGold Cookies Jar",
+    size: "60 PCS & 145 PCS",
     category: "Cookies",
     description:
-      "Delightful coconut-flavored cookies with a tropical twist   crunchy and irresistible.",
-    image: `${basePath}/images/coconut-cookies-removebg-preview.png`,
+      "Crispy and crunchy cookies in a premium reusable plastic jar   always fresh and ready to enjoy.",
+    image: `${basePath}/images/cookies-jar-removebg-preview.png`,
     badge: null,
-  },
-  {
-    name: "MyGold Export Quality Tea",
-    size: "7g   125g",
-    category: "Tea",
-    description:
-      "A supreme export quality blend with rich aroma and an unforgettable taste   Malawi's finest tea.",
-    image: `${basePath}/images/export-quality-range-removebg-preview.png`,
-    badge: "Popular",
   },
 ];
 

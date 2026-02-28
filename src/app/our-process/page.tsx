@@ -103,7 +103,7 @@ const cookieSteps = [
     location: "Nationwide Delivery",
     description:
       "MyGold cookies reach supermarkets, grocery stores, and traders throughout Malawi    from Lilongwe and Blantyre to local shops in smaller towns.",
-    image: `${basePath}/images/cookies-bag-removebg-preview.png`,
+    image: `${basePath}/images/cookies-jar-removebg-preview.png`,
     color: "bg-gold-dark",
   },
 ];

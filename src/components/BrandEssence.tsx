@@ -64,7 +64,7 @@ export default function BrandEssence() {
                 />
               </div>
 
-              {/* Info card - top right */}
+              {/* Info card - top right
               <div className="absolute -top-4 -right-4 sm:-right-6 rounded-2xl bg-white p-5 shadow-xl shadow-brown/10 border border-cream-dark">
                 <div className="space-y-4">
                   {[
@@ -81,7 +81,7 @@ export default function BrandEssence() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               {/* Decorative border */}
               <div className="absolute -bottom-3 -right-3 w-full h-full rounded-3xl border-2 border-gold/20 -z-10" />

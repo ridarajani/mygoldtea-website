@@ -139,7 +139,8 @@ const floatingProducts = [
 
 export default function EverythingYouNeed() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [offset, setOffset] = useState(0);
+  const productRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const rafId = useRef(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -163,16 +164,26 @@ export default function EverythingYouNeed() {
     observer.observe(section);
 
     const handleScroll = () => {
-      const rect = section.getBoundingClientRect();
-      const sectionCenter = rect.top + rect.height / 2;
-      const viewportCenter = window.innerHeight / 2;
-      setOffset(sectionCenter - viewportCenter);
+      cancelAnimationFrame(rafId.current);
+      rafId.current = requestAnimationFrame(() => {
+        const rect = section.getBoundingClientRect();
+        const sectionCenter = rect.top + rect.height / 2;
+        const viewportCenter = window.innerHeight / 2;
+        const offset = sectionCenter - viewportCenter;
+
+        productRefs.current.forEach((el, i) => {
+          if (el) {
+            el.style.transform = `translate3d(0, ${offset * floatingProducts[i].speed}px, 0)`;
+          }
+        });
+      });
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
 
     return () => {
+      cancelAnimationFrame(rafId.current);
       observer.disconnect();
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", checkMobile);
@@ -182,19 +193,19 @@ export default function EverythingYouNeed() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-cream min-h-screen flex items-center overflow-hidden md:overflow-visible"
+      className="relative mt-20 mb-20 bg-cream min-h-screen flex items-center overflow-hidden md:overflow-visible"
     >
       {/* Floating product images */}
-      {floatingProducts.map((product) => (
+      {floatingProducts.map((product, i) => (
         <div
           key={product.alt}
-          className="absolute transition-all duration-700 ease-out pointer-events-none"
+          ref={(el) => { productRefs.current[i] = el; }}
+          className="absolute pointer-events-none will-change-transform"
           style={{
             top: isMobile ? product.mobileTop : product.top,
             left: isMobile ? product.mobileLeft : product.left,
-            transform: `translateY(${offset * product.speed}px)`,
             opacity: isVisible ? 1 : 0,
-            transitionDelay: `${product.delay}ms`,
+            transition: `opacity 0.7s ease-out ${product.delay}ms`,
           }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -217,7 +228,7 @@ export default function EverythingYouNeed() {
       {/* Center text */}
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <h2
-          className="text-5xl sm:text-6xl lg:text-8xl font-bold text-brown-dark leading-[1.1] transition-all duration-700"
+          className="text-5xl sm:text-6xl lg:text-7xl font-bold text-brown-dark leading-[1.1] transition-all duration-700"
           style={{
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? "translateY(0)" : "translateY(40px)",

@@ -45,7 +45,7 @@ const teaProducts = [
     size: "200g",
     category: "Gift",
     description:
-      "Beautifully presented in a reusable glass jar   makes an excellent gift or kitchen centerpiece.",
+      "Beautifully presented in a reusable plastic jar   makes an excellent gift or kitchen centerpiece.",
     image: `${basePath}/images/tea-jar-removebg-preview.png`,
     badge: "Gift Pick",
     tab: "Tea Collection",
@@ -134,21 +134,11 @@ const cookieProducts = [
     tab: "Cookies & Snacks",
   },
   {
-    name: "MyGold Cookies",
-    size: "500g",
-    category: "Cookies & Snacks",
-    description:
-      "A generous bag of crispy, crunchy cookies   great for sharing with family and friends.",
-    image: `${basePath}/images/cookies-bag-removebg-preview.png`,
-    badge: null,
-    tab: "Cookies & Snacks",
-  },
-  {
     name: "MyGold Cookies Jar",
     size: "60 PCS & 145 PCS",
     category: "Cookies & Snacks",
     description:
-      "Crispy and crunchy cookies in a premium reusable jar   always fresh and ready to enjoy.",
+      "Crispy and crunchy cookies in a premium reusable plastic jar   always fresh and ready to enjoy.",
     image: `${basePath}/images/cookies-jar-removebg-preview.png`,
     badge: null,
     tab: "Cookies & Snacks",
@@ -279,8 +269,8 @@ const gridFloatingProducts = [
     speed: -0.12,
   },
   {
-    image: `${basePath}/images/cookies-bag-removebg-preview.png`,
-    alt: "Cookies Bag",
+    image: `${basePath}/images/coconut-cookies-removebg-preview.png`,
+    alt: "Coconut Cookies Left",
     size: 210,
     top: "64%",
     left: "0%",
@@ -388,7 +378,8 @@ const gridFloatingProducts = [
 export default function ProductsPage() {
   const [activeTab, setActiveTab] = useState("All Products");
   const gridRef = useRef<HTMLElement>(null);
-  const [gridOffset, setGridOffset] = useState(0);
+  const floatingRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const rafId = useRef(0);
   const [gridVisible, setGridVisible] = useState(false);
 
   useEffect(() => {
@@ -407,16 +398,26 @@ export default function ProductsPage() {
     observer.observe(grid);
 
     const handleScroll = () => {
-      const rect = grid.getBoundingClientRect();
-      const sectionCenter = rect.top + rect.height / 2;
-      const viewportCenter = window.innerHeight / 2;
-      setGridOffset(sectionCenter - viewportCenter);
+      cancelAnimationFrame(rafId.current);
+      rafId.current = requestAnimationFrame(() => {
+        const rect = grid.getBoundingClientRect();
+        const sectionCenter = rect.top + rect.height / 2;
+        const viewportCenter = window.innerHeight / 2;
+        const offset = sectionCenter - viewportCenter;
+
+        floatingRefs.current.forEach((el, i) => {
+          if (el) {
+            el.style.transform = `translate3d(0, ${offset * gridFloatingProducts[i].speed}px, 0)`;
+          }
+        });
+      });
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
 
     return () => {
+      cancelAnimationFrame(rafId.current);
       observer.disconnect();
       window.removeEventListener("scroll", handleScroll);
     };
@@ -503,15 +504,16 @@ export default function ProductsPage() {
       {/* Products Grid */}
       <section ref={gridRef} className="relative bg-cream py-16 overflow-visible">
         {/* Floating product images in background */}
-        {gridFloatingProducts.map((product) => (
+        {gridFloatingProducts.map((product, i) => (
           <div
             key={product.alt}
-            className="absolute hidden md:block pointer-events-none transition-all duration-700 ease-out"
+            ref={(el) => { floatingRefs.current[i] = el; }}
+            className="absolute hidden md:block pointer-events-none will-change-transform"
             style={{
               top: product.top,
               left: product.left,
-              transform: `translateY(${gridOffset * product.speed}px)`,
               opacity: gridVisible ? 0.15 : 0,
+              transition: "opacity 0.7s ease-out",
             }}
           >
             <Image

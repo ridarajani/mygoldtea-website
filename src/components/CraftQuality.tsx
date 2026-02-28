@@ -25,14 +25,14 @@ const processSteps = [
     title: "Quality Control",
     description:
       "Every batch is rigorously tested to meet our high standards   ensuring consistent quality, freshness, and flavor in every product.",
-    image: `${basePath}/images/margarine.png`,
+    image: `${basePath}/images/margarine-pack.png`,
   },
   {
     step: "04",
     title: "Packaging",
     description:
       "Sealed fresh in premium packaging to lock in flavor and freshness, ensuring every product reaches you in perfect condition.",
-    image: `${basePath}/images/cookies-bag.png`,
+    image: `${basePath}/images/cookies-jar-removebg-preview.png`,
   },
 ];
 

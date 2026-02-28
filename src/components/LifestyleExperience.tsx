@@ -17,7 +17,7 @@ export default function LifestyleExperience() {
                 <div className="space-y-4">
                   <div className="rounded-2xl overflow-hidden h-48 shadow-md shadow-brown/10">
                     <Image
-                      src={`${basePath}/images/margarine.png`}
+                      src={`${basePath}/images/margarine-pack.png`}
                       alt="MyGold Margarine"
                       width={300}
                       height={200}

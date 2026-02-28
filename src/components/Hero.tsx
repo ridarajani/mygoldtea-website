@@ -78,7 +78,7 @@ export default function Hero() {
               {/* Main product image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/50 border border-white/10">
                 <Image
-                  src={`${basePath}/images/herosection-main.png`}
+                  src={`${basePath}/images/hero-section-main.png`}
                   alt="MyGold Complete Product Range"
                   width={600}
                   height={400}
@@ -89,23 +89,25 @@ export default function Hero() {
               </div>
 
               {/* Floating product card - top right */}
-              <div className="absolute -top-6 -right-6 rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10 w-36 h-36">
+              <div className="absolute -top-6 -right-6 rounded-2xl overflow-hidden shadow-2xl shadow-gold/20 border-2 border-gold/40 w-36 h-36 ring-1 ring-white/10 backdrop-blur-sm">
                 <Image
                   src={`${basePath}/images/cookies.jpg`}
                   alt="MyGold Snacks"
                   fill
                   className="object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
               </div>
 
               {/* Floating product card - bottom left */}
-              <div className="absolute -bottom-6 -left-6 rounded-2xl overflow-hidden shadow-2xl shadow-black/40 border border-white/10 w-40 h-32">
+              <div className="absolute -bottom-6 -left-6 rounded-2xl overflow-hidden shadow-2xl shadow-gold/20 border-2 border-gold/40 w-50 h-32 ring-1 ring-white/10 backdrop-blur-sm">
                 <Image
-                  src={`${basePath}/images/margarine.png`}
+                  src={`${basePath}/images/margarine-pack.png`}
                   alt="MyGold Kilombero Rice Range"
                   fill
                   className="object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
               </div>
 
               {/* Floating badge */}

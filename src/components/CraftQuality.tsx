@@ -32,7 +32,7 @@ const processSteps = [
     title: "Packaging",
     description:
       "Sealed fresh in premium packaging to lock in flavor and freshness, ensuring every product reaches you in perfect condition.",
-    image: `${basePath}/images/cookies-jar-removebg-preview.png`,
+    image: `${basePath}/images/cookies-overview.png`,
   },
 ];
 

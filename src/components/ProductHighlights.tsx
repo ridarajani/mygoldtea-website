@@ -79,15 +79,6 @@ const featuredProducts = [
     image: `${basePath}/images/rice-5kg-removebg-preview.png`,
     badge: "Premium",
   },
-  {
-    name: "MyGold Cookies Jar",
-    size: "60 PCS & 145 PCS",
-    category: "Cookies",
-    description:
-      "Crispy and crunchy cookies in a premium reusable plastic jar   always fresh and ready to enjoy.",
-    image: `${basePath}/images/cookies-jar-removebg-preview.png`,
-    badge: null,
-  },
 ];
 
 export default function ProductHighlights() {

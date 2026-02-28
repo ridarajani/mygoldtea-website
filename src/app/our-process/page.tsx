@@ -93,8 +93,8 @@ const cookieSteps = [
     title: "Packaging & Sealing",
     location: "Fresh & Secure",
     description:
-      "Cookies are packaged in moisture-proof materials to maintain crunch and freshness. Available in 100g packs, 500g bags, and premium 60-piece and 145-piece jars.",
-    image: `${basePath}/images/cookies-jar-removebg-preview.png`,
+      "Cookies are packaged in moisture-proof materials to maintain crunch and freshness. Available in 100g packs and 500g bags.",
+    image: `${basePath}/images/shortbread-cookies-removebg-preview.png`,
     color: "bg-green-dark",
   },
   {
@@ -103,7 +103,7 @@ const cookieSteps = [
     location: "Nationwide Delivery",
     description:
       "MyGold cookies reach supermarkets, grocery stores, and traders throughout Malawi    from Lilongwe and Blantyre to local shops in smaller towns.",
-    image: `${basePath}/images/cookies-jar-removebg-preview.png`,
+    image: `${basePath}/images/peanut-cookies-removebg-preview.png`,
     color: "bg-gold-dark",
   },
 ];

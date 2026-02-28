@@ -133,16 +133,6 @@ const cookieProducts = [
     badge: "New",
     tab: "Cookies & Snacks",
   },
-  {
-    name: "MyGold Cookies Jar",
-    size: "60 PCS & 145 PCS",
-    category: "Cookies & Snacks",
-    description:
-      "Crispy and crunchy cookies in a premium reusable plastic jar   always fresh and ready to enjoy.",
-    image: `${basePath}/images/cookies-jar-removebg-preview.png`,
-    badge: null,
-    tab: "Cookies & Snacks",
-  },
 ];
 
 const otherProducts = [
@@ -251,14 +241,6 @@ const gridFloatingProducts = [
     top: "28%",
     left: "-2%",
     speed: -0.17,
-  },
-  {
-    image: `${basePath}/images/cookies-jar-removebg-preview.png`,
-    alt: "Cookies Jar",
-    size: 280,
-    top: "40%",
-    left: "0%",
-    speed: 0.14,
   },
   {
     image: `${basePath}/images/peanut-cookies-removebg-preview.png`,

@@ -18,7 +18,7 @@ const processSteps = [
     title: "Crafting",
     description:
       "Our skilled team uses time-tested recipes and modern techniques to create cookies, tea, margarine, and snacks with consistently great taste.",
-    image: `${basePath}/images/cookies-overview.png`,
+    image: `${basePath}/images/cookie-overview.png`,
   },
   {
     step: "03",
@@ -32,7 +32,7 @@ const processSteps = [
     title: "Packaging",
     description:
       "Sealed fresh in premium packaging to lock in flavor and freshness, ensuring every product reaches you in perfect condition.",
-    image: `${basePath}/images/cookies-overview.png`,
+    image: `${basePath}/images/cookie-overview.png`,
   },
 ];
 

@@ -37,7 +37,7 @@ export default function LifestyleExperience() {
                 <div className="space-y-4 pt-8">
                   <div className="rounded-2xl overflow-hidden h-64 shadow-md shadow-brown/10">
                     <Image
-                      src={`${basePath}/images/cookies-overview.png`}
+                      src={`${basePath}/images/cookie-overview.png`}
                       alt="MyGold Cookies range"
                       width={300}
                       height={260}

@@ -63,7 +63,7 @@ const featuredProducts = [
   },
   {
     name: "MyGold Margarine",
-    size: "250g   1kg",
+    size: "25g and 100g",
     category: "Margarine",
     description:
       "Smooth, creamy margarine ideal for cooking, baking, and spreading   quality you can taste.",

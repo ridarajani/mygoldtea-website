@@ -78,7 +78,7 @@ export default function Hero() {
               {/* Main product image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/50 border border-white/10">
                 <Image
-                  src={`${basePath}/images/hero-section-main.png`}
+                  src={`${basePath}/images/heroo-section-main.png`}
                   alt="MyGold Complete Product Range"
                   width={600}
                   height={400}
@@ -88,33 +88,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
 
-              {/* Floating product card - top right */}
-              <div className="absolute -top-6 -right-6 rounded-2xl overflow-hidden shadow-2xl shadow-gold/20 border-2 border-gold/40 w-36 h-36 ring-1 ring-white/10 backdrop-blur-sm">
-                <Image
-                  src={`${basePath}/images/cookies.jpg`}
-                  alt="MyGold Snacks"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              </div>
-
-              {/* Floating product card - bottom left */}
-              <div className="absolute -bottom-6 -left-6 rounded-2xl overflow-hidden shadow-2xl shadow-gold/20 border-2 border-gold/40 w-50 h-32 ring-1 ring-white/10 backdrop-blur-sm">
-                <Image
-                  src={`${basePath}/images/margarine-pack.png`}
-                  alt="MyGold Kilombero Rice Range"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              </div>
-
-              {/* Floating badge */}
-              <div className="absolute bottom-8 right-8 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 px-5 py-3">
-                <div className="text-2xl font-bold text-gold">#1</div>
-                <div className="text-xs text-white/70">Malawi Food Brand</div>
-              </div>
+          
             </div>
           </div>
         </div>

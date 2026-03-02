@@ -46,7 +46,7 @@ export default function BrandEssence() {
               {/* Main image */}
               <div className="rounded-3xl overflow-hidden shadow-xl shadow-brown/10">
                 <Image
-                  src={`${basePath}/images/cookies-overview.png`}
+                  src={`${basePath}/images/cookie-overview.png`}
                   alt="MyGold Cookies Range"
                   width={560}
                   height={400}
@@ -55,14 +55,14 @@ export default function BrandEssence() {
               </div>
 
               {/* Floating card - bottom left */}
-              <div className="absolute -bottom-8 -left-4 sm:-left-8 rounded-2xl overflow-hidden shadow-xl shadow-brown/10 border-4 border-cream w-44 sm:w-52 h-36 sm:h-40">
+              {/* <div className="absolute -bottom-8 -left-4 sm:-left-8 rounded-2xl overflow-hidden shadow-xl shadow-brown/10 border-4 border-cream w-44 sm:w-52 h-36 sm:h-40">
                 <Image
                   src={`${basePath}/images/rice-overview.png`}
                   alt="MyGold Kilombero Rice"
                   fill
                   className="object-cover"
                 />
-              </div>
+              </div> */}
 
               {/* Info card - top right
               <div className="absolute -top-4 -right-4 sm:-right-6 rounded-2xl bg-white p-5 shadow-xl shadow-brown/10 border border-cream-dark">
